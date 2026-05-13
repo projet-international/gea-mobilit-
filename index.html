@@ -3,333 +3,374 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Évaluation sérieuse pour les étudiants BUT GEA : partir étudier à l'étranger en 3ème année ?">
-<meta name="theme-color" content="#2D3BE8">
-<title>GEAgo — Évaluation mobilité BUT GEA</title>
+<meta name="description" content="Évaluation de mobilité internationale et guide des destinations pour les étudiants BUT GEA de Vienne.">
+<meta name="theme-color" content="#14171E">
+<title>GEA Inter — Mobilité BUT GEA Vienne</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --blue:#2D3BE8; --blue-dark:#1A26C4; --blue-light:#EEF0FD;
-  --orange:#FF6B35; --orange-light:#FFF0EB;
-  --ink:#0D1240; --ink-muted:#5A6080; --ink-faint:#B0B8D8;
-  --bg:#F0F4FF; --white:#FFFFFF;
-  --green:#00C48C; --green-light:#E6FAF4;
-  --border:rgba(45,59,232,.1); --border-mid:rgba(45,59,232,.22);
-  --r:14px; --r-sm:8px; --r-pill:999px;
-  --shadow:0 4px 24px rgba(45,59,232,.10); --shadow-lg:0 12px 48px rgba(45,59,232,.16);
+  --bg:#1C1F26; --bg-card:#22262F; --bg-raised:#272B35; --bg-nav:#14171E;
+  --ink:#F0F2F5; --ink-muted:#8B95A8; --ink-faint:#3E4556;
+  --sage:#7EC8A4; --sage-dk:#5AAF88; --sage-bg:rgba(126,200,164,.1); --sage-bdr:rgba(126,200,164,.22);
+  --amber:#E8A84C; --amber-bg:rgba(232,168,76,.1);
+  --red:#E87070; --red-bg:rgba(232,112,112,.1);
+  --blue:#6B9FE8; --blue-bg:rgba(107,159,232,.1); --blue-bdr:rgba(107,159,232,.22);
+  --border:rgba(255,255,255,.07); --border-md:rgba(255,255,255,.12);
+  --r:10px; --r-sm:6px; --r-pill:999px;
+  --shadow:0 4px 24px rgba(0,0,0,.35); --shadow-lg:0 12px 48px rgba(0,0,0,.5);
+  --font:'Inter',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden;font-size:16px}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.15}
+h1,h2,h3,h4{line-height:1.2;font-weight:700}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--ink-faint);border-radius:3px}
 
-/* NAV */
-nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-.nav-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:66px}
-.logo{font-family:'Syne',sans-serif;font-size:23px;font-weight:800;color:var(--blue);display:flex;align-items:center;gap:7px;cursor:pointer}
-.logo-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);animation:pdot 2s infinite}
-@keyframes pdot{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
-.nav-links{display:flex;align-items:center;gap:2rem}
-.nav-link{font-size:15px;font-weight:500;color:var(--ink-muted);transition:color .2s;cursor:pointer}
-.nav-link:hover{color:var(--blue)}
-.nav-cta{background:var(--blue);color:white;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;padding:10px 22px;border-radius:var(--r-pill);transition:all .2s;cursor:pointer;border:none}
-.nav-cta:hover{background:var(--blue-dark);transform:translateY(-1px)}
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:200;background:rgba(20,23,30,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-size:20px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px;cursor:pointer;letter-spacing:-.02em}
+.logo em{font-style:normal;color:var(--sage)}
+.logo-dot{width:7px;height:7px;border-radius:50%;background:var(--sage);animation:pdot 2.5s ease-in-out infinite}
+@keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+.nav-links{display:flex;align-items:center;gap:1.75rem}
+.nav-link{font-size:14px;font-weight:500;color:var(--ink-muted);transition:color .2s;cursor:pointer}
+.nav-link:hover{color:var(--ink)}
+.nav-cta{background:var(--sage);color:#0D1F16;font-size:13px;font-weight:700;padding:8px 18px;border-radius:var(--r-sm);border:none;cursor:pointer;transition:all .2s}
+.nav-cta:hover{background:var(--sage-dk);transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
-.mobile-nav{display:none;position:fixed;inset:0;z-index:199;background:white;padding:80px 2rem 2rem;flex-direction:column;gap:1.5rem}
+.hamburger span{display:block;width:20px;height:2px;background:var(--ink-muted);border-radius:1px;transition:all .3s}
+.mobile-nav{display:none;position:fixed;inset:0;z-index:199;background:var(--bg-nav);padding:80px 2rem 2rem;flex-direction:column;gap:1.5rem}
 .mobile-nav.open{display:flex}
-.mobile-nav-link{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--ink);cursor:pointer}
+.mobile-nav-link{font-size:22px;font-weight:700;color:var(--ink);cursor:pointer}
 
-/* PAGES */
-.page{display:none}
-.page.active{display:block}
+/* ── PAGES ── */
+.page{display:none}.page.active{display:block}
 
-/* ════ HOME ════ */
-.hero{max-width:1100px;margin:0 auto;padding:5rem 2rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-light);color:var(--blue);font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:.04em;padding:7px 18px;border-radius:var(--r-pill);margin-bottom:1.5rem}
-.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);animation:pdot 2s infinite}
-.hero h1{font-size:clamp(2.6rem,4.5vw,4rem);font-weight:800;color:var(--ink);margin-bottom:1.25rem}
-.hero h1 .hi{color:var(--orange);position:relative;display:inline-block}
-.hero h1 .hi::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:4px;background:var(--orange);border-radius:2px;opacity:.35}
-.hero-sub{font-size:18px;color:var(--ink-muted);line-height:1.75;max-width:490px;margin-bottom:2rem}
+/* ── HOME ── */
+.hero{max-width:1100px;margin:0 auto;padding:5.5rem 2rem 4.5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--sage-bg);border:1px solid var(--sage-bdr);color:var(--sage);font-size:12px;font-weight:600;letter-spacing:.05em;padding:5px 14px;border-radius:var(--r-pill);margin-bottom:1.5rem;text-transform:uppercase}
+.hero h1{font-size:clamp(2.4rem,4vw,3.6rem);font-weight:700;color:var(--ink);margin-bottom:1.25rem;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--sage)}
+.hero-sub{font-size:17px;color:var(--ink-muted);line-height:1.75;max-width:460px;margin-bottom:2rem}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{font-family:'Syne',sans-serif;font-weight:700;border:none;cursor:pointer;transition:all .2s}
-.btn-primary{background:var(--blue);color:white;font-size:16px;padding:15px 30px;border-radius:var(--r-pill)}
-.btn-primary:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:var(--shadow)}
-.btn-outline{background:white;color:var(--blue);font-size:16px;padding:14px 28px;border-radius:var(--r-pill);border:2px solid var(--border-mid)}
-.btn-outline:hover{background:var(--blue-light)}
-.hero-card{background:white;border-radius:20px;padding:2.25rem;box-shadow:var(--shadow-lg);border:1px solid var(--border)}
-.hc-label{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted);margin-bottom:1.25rem}
+.btn-hp{font-family:var(--font);font-weight:600;font-size:15px;padding:13px 26px;border-radius:var(--r-sm);cursor:pointer;transition:all .2s;border:none}
+.btn-hp-p{background:var(--sage);color:#0D1F16}
+.btn-hp-p:hover{background:var(--sage-dk);transform:translateY(-2px);box-shadow:0 6px 20px rgba(126,200,164,.25)}
+.btn-hp-s{background:transparent;color:var(--ink-muted);border:1px solid var(--border-md)}
+.btn-hp-s:hover{color:var(--ink);border-color:rgba(255,255,255,.2);background:var(--bg-raised)}
+.hero-right{position:relative}
+.hero-card{background:var(--bg-card);border:1px solid var(--border-md);border-radius:var(--r);padding:1.75rem;box-shadow:var(--shadow)}
+.hc-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:1.25rem}
 .hc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.5rem}
-.hc-stat{background:var(--bg);border-radius:var(--r-sm);padding:1rem;text-align:center}
-.hc-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--blue);line-height:1;margin-bottom:4px}
-.hc-sl{font-size:11px;font-weight:600;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.05em}
+.hc-stat{background:var(--bg-raised);border-radius:var(--r-sm);padding:.875rem;text-align:center}
+.hc-num{font-size:1.875rem;font-weight:700;color:var(--sage);line-height:1;margin-bottom:4px;letter-spacing:-.02em}
+.hc-sl{font-size:10px;font-weight:600;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em}
 .hc-div{height:1px;background:var(--border);margin-bottom:1.25rem}
 .hc-bars{display:flex;flex-direction:column;gap:10px}
 .hc-bar-row{display:grid;grid-template-columns:130px 1fr 36px;align-items:center;gap:10px}
-.hc-bar-label{font-size:13px;color:var(--ink-muted);font-weight:500}
-.hc-bar-track{height:7px;background:var(--bg);border-radius:4px;overflow:hidden}
-.hc-bar-fill{height:100%;border-radius:4px}
-.hc-bar-pct{font-size:13px;font-weight:700;color:var(--ink);text-align:right}
-.float-chip{position:absolute;background:white;border-radius:var(--r-pill);padding:9px 18px;box-shadow:var(--shadow);border:1px solid var(--border);font-size:13px;font-weight:600;display:flex;align-items:center;gap:7px;white-space:nowrap;animation:floaty 3s ease-in-out infinite}
-.fc1{top:-18px;right:24px}.fc2{bottom:-16px;left:-8px;animation-delay:1.1s}
-.hero-right{position:relative}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.feat-band{background:var(--blue);padding:2rem 2rem}
+.hc-bar-label{font-size:13px;color:var(--ink-muted)}
+.hc-bar-track{height:5px;background:var(--bg-raised);border-radius:3px;overflow:hidden}
+.hc-bar-fill{height:100%;border-radius:3px}
+.hc-bar-pct{font-size:12px;font-weight:600;color:var(--ink);text-align:right}
+.float-chip{position:absolute;background:var(--bg-card);border:1px solid var(--border-md);border-radius:var(--r-pill);padding:7px 14px;font-size:12px;font-weight:500;color:var(--ink-muted);display:flex;align-items:center;gap:7px;white-space:nowrap;animation:floaty 3.5s ease-in-out infinite;box-shadow:var(--shadow)}
+.fc1{top:-16px;right:20px}.fc2{bottom:-14px;left:-10px;animation-delay:1.3s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* Features band */
+.feat-band{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem 2rem}
 .feat-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap}
-.feat-item{display:flex;align-items:center;gap:9px;color:white;font-size:14px;font-weight:600;font-family:'Syne',sans-serif;white-space:nowrap}
+.feat-item{display:flex;align-items:center;gap:8px;color:var(--ink-muted);font-size:13px;font-weight:500;white-space:nowrap}
+.feat-check{color:var(--sage);font-size:14px}
 
-/* ════ TEST PAGE ════ */
-#page-test{background:white}
-.test-header{background:var(--blue);padding:3rem 2rem 2rem;text-align:center;color:white}
-.test-header h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;margin-bottom:.6rem}
-.test-header p{color:rgba(255,255,255,.75);font-size:16px;max-width:580px;margin:0 auto}
-.test-body{max-width:700px;margin:0 auto;padding:3rem 2rem 5rem}
+/* ── MODULE CARDS (home) ── */
+.modules-section{max-width:1100px;margin:0 auto;padding:4rem 2rem}
+.modules-header{text-align:center;margin-bottom:2.5rem}
+.sec-tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--sage);margin-bottom:.75rem}
+.sec-title{font-size:clamp(1.75rem,3vw,2.4rem);font-weight:700;color:var(--ink);margin-bottom:.875rem;letter-spacing:-.025em}
+.sec-sub{font-size:16px;color:var(--ink-muted);max-width:560px;margin:0 auto;line-height:1.7}
+.modules-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.module-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:2rem;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.module-card:hover{border-color:var(--border-md);transform:translateY(-3px);box-shadow:var(--shadow)}
+.module-card.sage{border-color:var(--sage-bdr)}
+.module-card.blue{border-color:var(--blue-bdr)}
+.module-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.module-card.sage::before{background:var(--sage)}
+.module-card.blue::before{background:var(--blue)}
+.module-icon{font-size:2.25rem;margin-bottom:1rem}
+.module-title{font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;letter-spacing:-.01em}
+.module-desc{font-size:14px;color:var(--ink-muted);line-height:1.7;margin-bottom:1.25rem}
+.module-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1.5rem}
+.module-tag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill)}
+.module-tag.sage{background:var(--sage-bg);color:var(--sage);border:1px solid var(--sage-bdr)}
+.module-tag.blue{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-bdr)}
+.module-cta{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--sage)}
+.module-card.blue .module-cta{color:var(--blue)}
+.module-arrow{font-size:18px;transition:transform .2s}
+.module-card:hover .module-arrow{transform:translateX(4px)}
 
-/* Question */
-.q-card{display:none;animation:fadeQ .35s ease}
-.q-card.active{display:block}
-@keyframes fadeQ{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-.q-bloc{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:.875rem;display:flex;align-items:center;gap:8px}
-.q-title{font-family:'Syne',sans-serif;font-size:clamp(1.25rem,2.5vw,1.6rem);font-weight:800;color:var(--ink);margin-bottom:.6rem;line-height:1.3}
+/* ── TEST PAGE ── */
+#page-test{background:var(--bg)}
+.test-header{background:var(--bg-nav);border-bottom:1px solid var(--border);padding:3rem 2rem 2.5rem;text-align:center}
+.test-header h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--ink);margin-bottom:.6rem;letter-spacing:-.02em}
+.test-header p{color:var(--ink-muted);font-size:16px;max-width:560px;margin:0 auto}
+.test-body{max-width:680px;margin:0 auto;padding:3rem 2rem 6rem}
+.q-card{display:none;animation:fadeQ .3s ease}.q-card.active{display:block}
+@keyframes fadeQ{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.q-bloc{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--sage);margin-bottom:1rem}
+.q-title{font-size:clamp(1.2rem,2.5vw,1.5rem);font-weight:700;color:var(--ink);margin-bottom:.625rem;letter-spacing:-.02em;line-height:1.3}
 .q-subtitle{font-size:15px;color:var(--ink-muted);margin-bottom:1.5rem;line-height:1.7}
-.q-context{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.125rem;margin-bottom:1.75rem;font-size:14px;color:var(--ink-muted);line-height:1.7}
-.q-context strong{color:var(--blue);font-weight:600}
-
-/* Options — PAS de barre de progression */
-.options{display:flex;flex-direction:column;gap:12px}
-.opt{background:var(--bg);border:2px solid transparent;border-radius:var(--r);padding:1.125rem 1.375rem;cursor:pointer;transition:all .2s;display:flex;align-items:flex-start;gap:14px;text-align:left;width:100%}
-.opt:hover{background:white;border-color:var(--border-mid);transform:translateX(3px)}
-.opt.selected{background:var(--blue-light);border-color:var(--blue)}
-.opt-radio{width:22px;height:22px;border-radius:50%;border:2px solid var(--ink-faint);flex-shrink:0;margin-top:2px;transition:all .2s;display:flex;align-items:center;justify-content:center}
-.opt.selected .opt-radio{border-color:var(--blue);background:var(--blue)}
-.opt.selected .opt-radio::after{content:'';width:8px;height:8px;border-radius:50%;background:white}
-.opt-label{font-weight:600;font-size:15px;color:var(--ink);margin-bottom:3px}
+.q-context{background:var(--sage-bg);border-left:2px solid var(--sage);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1rem 1.125rem;margin-bottom:1.75rem;font-size:13px;color:var(--ink-muted);line-height:1.7}
+.q-context strong{color:var(--sage);font-weight:600}
+.options{display:flex;flex-direction:column;gap:10px}
+.opt{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:1.125rem 1.25rem;cursor:pointer;transition:all .18s;display:flex;align-items:flex-start;gap:14px;text-align:left;width:100%}
+.opt:hover{border-color:var(--border-md);background:var(--bg-raised);transform:translateX(3px)}
+.opt.selected{background:var(--sage-bg);border-color:var(--sage-bdr)}
+.opt-radio{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--ink-faint);flex-shrink:0;margin-top:2px;transition:all .18s;display:flex;align-items:center;justify-content:center}
+.opt.selected .opt-radio{border-color:var(--sage);background:var(--sage)}
+.opt.selected .opt-radio::after{content:'';width:7px;height:7px;border-radius:50%;background:#0D1F16}
+.opt-label{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:3px}
 .opt-desc{font-size:13px;color:var(--ink-muted);line-height:1.5}
+.q-nav{display:flex;justify-content:space-between;align-items:center;margin-top:2rem}
+.btn-prev{background:transparent;color:var(--ink-muted);font-family:var(--font);font-size:14px;font-weight:500;padding:10px 20px;border-radius:var(--r-sm);border:1px solid var(--border);cursor:pointer;transition:all .2s}
+.btn-prev:hover{color:var(--ink);border-color:var(--border-md)}
+.btn-next{background:var(--sage);color:#0D1F16;font-family:var(--font);font-size:15px;font-weight:700;padding:12px 30px;border-radius:var(--r-sm);border:none;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(126,200,164,.2)}
+.btn-next:hover{background:var(--sage-dk);transform:translateY(-2px)}
+.btn-next:disabled{opacity:.3;cursor:not-allowed;transform:none;box-shadow:none}
 
-/* Nav */
-.q-nav{display:flex;justify-content:space-between;align-items:center;margin-top:2.25rem}
-.btn-prev{background:white;color:var(--ink-muted);font-family:'Syne',sans-serif;font-size:14px;font-weight:600;padding:12px 24px;border-radius:var(--r-pill);border:2px solid var(--border-mid);cursor:pointer;transition:all .2s}
-.btn-prev:hover{color:var(--ink)}
-.btn-next{background:var(--blue);color:white;font-family:'Syne',sans-serif;font-size:16px;font-weight:800;padding:13px 34px;border-radius:var(--r-pill);border:none;cursor:pointer;transition:all .2s;box-shadow:var(--shadow)}
-.btn-next:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
-.btn-next:disabled{opacity:.38;cursor:not-allowed;transform:none;box-shadow:none}
+/* ── DESTINATIONS PAGE ── */
+#page-dest{background:var(--bg)}
+.dest-header{background:var(--bg-nav);border-bottom:1px solid var(--border);padding:3rem 2rem;text-align:center}
+.dest-header h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--ink);margin-bottom:.5rem;letter-spacing:-.02em}
+.dest-header p{color:var(--ink-muted);font-size:15px;max-width:560px;margin:0 auto}
+.dest-body{max-width:1000px;margin:0 auto;padding:3rem 2rem 5rem}
+.dest-quiz-wrap{max-width:680px;margin:0 auto}
+.dest-result-wrap{display:none}
 
-/* ════ LOADING ════ */
-#page-loading{background:var(--blue);min-height:100vh;display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:2rem}
+/* Destination cards */
+.dest-section-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);margin-bottom:1.25rem;margin-top:2.5rem;display:flex;align-items:center;gap:10px}
+.dest-section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.dest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:1rem}
+.dest-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:all .2s;cursor:default}
+.dest-card.top{border-color:var(--sage-bdr);background:rgba(126,200,164,.06)}
+.dest-card.good{border-color:rgba(107,159,232,.2)}
+.dest-card-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.875rem}
+.dest-flag{font-size:2rem;margin-bottom:0}
+.dest-match{font-size:11px;font-weight:700;padding:3px 10px;border-radius:var(--r-pill)}
+.match-top{background:var(--sage-bg);color:var(--sage);border:1px solid var(--sage-bdr)}
+.match-good{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-bdr)}
+.match-ok{background:var(--bg-raised);color:var(--ink-muted);border:1px solid var(--border)}
+.dest-country{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.dest-city{font-size:13px;color:var(--ink-muted);margin-bottom:.875rem}
+.dest-school{font-size:13px;font-weight:600;color:var(--sage);margin-bottom:.375rem}
+.dest-school-full{font-size:12px;color:var(--ink-muted);margin-bottom:.875rem;line-height:1.5}
+.dest-pills{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:.875rem}
+.dest-pill{font-size:10px;font-weight:600;padding:2px 8px;border-radius:var(--r-pill);background:var(--bg-raised);color:var(--ink-muted);border:1px solid var(--border)}
+.dest-reasons{display:flex;flex-direction:column;gap:5px}
+.dest-reason{font-size:12px;color:var(--ink-muted);display:flex;align-items:flex-start;gap:6px;line-height:1.4}
+.dest-reason-icon{color:var(--sage);flex-shrink:0;margin-top:1px}
+.dest-reason.warn .dest-reason-icon{color:var(--amber)}
+.dest-reason.warn{color:var(--ink-faint)}
+
+/* ── LOADING ── */
+#page-loading{background:var(--bg-nav);min-height:100vh;display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:2rem}
 #page-loading.active{display:flex}
-.load-icon{font-size:3.5rem;margin-bottom:1.5rem;animation:spin 4s linear infinite}
+.load-icon{font-size:3rem;margin-bottom:1.5rem;animation:spin 5s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.load-title{font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;color:white;margin-bottom:.75rem}
-.load-sub{font-size:16px;color:rgba(255,255,255,.7);margin-bottom:2.5rem;max-width:420px;line-height:1.7}
-.load-steps{display:flex;flex-direction:column;gap:.75rem;width:100%;max-width:380px}
-.ls{display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(255,255,255,.45);transition:color .4s}
-.ls.active{color:white}.ls.done{color:var(--green)}
-.ls-dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.2);flex-shrink:0;transition:background .4s}
-.ls.active .ls-dot{background:white;animation:pdot .8s infinite}
-.ls.done .ls-dot{background:var(--green)}
-.load-bar-wrap{width:100%;max-width:380px;margin-top:2.25rem}
-.load-bar-track{height:4px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden}
-.load-bar-fill{height:100%;background:var(--orange);border-radius:2px;width:0%;transition:width .4s}
+.load-title{font-size:1.75rem;font-weight:700;color:var(--ink);margin-bottom:.75rem;letter-spacing:-.02em}
+.load-sub{font-size:15px;color:var(--ink-muted);margin-bottom:2.5rem;max-width:400px;line-height:1.7}
+.load-steps{display:flex;flex-direction:column;gap:.75rem;width:100%;max-width:360px}
+.ls{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-faint);transition:color .4s}
+.ls.active{color:var(--ink)}.ls.done{color:var(--sage)}
+.ls-dot{width:8px;height:8px;border-radius:50%;background:var(--ink-faint);flex-shrink:0;transition:background .4s}
+.ls.active .ls-dot{background:var(--ink);animation:pdot .8s infinite}
+.ls.done .ls-dot{background:var(--sage)}
+.load-bar-wrap{width:100%;max-width:360px;margin-top:2rem}
+.load-bar-track{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.load-bar-fill{height:100%;background:var(--sage);border-radius:2px;width:0%;transition:width .4s}
 
-/* ════ RESULTS PAGE ════ */
+/* ── RESULTS PAGE ── */
 #page-results{background:var(--bg)}
-.res-header{text-align:center;padding:4rem 2rem 2.5rem;background:white;border-bottom:1px solid var(--border)}
-.res-header h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--ink);margin-bottom:.75rem}
-.res-header p{font-size:17px;color:var(--ink-muted);max-width:560px;margin:0 auto}
-.res-body{max-width:820px;margin:0 auto;padding:3rem 2rem 5rem}
-
-.scores-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:2rem}
-.score-card{background:white;border-radius:var(--r);padding:2rem;text-align:center;border:2px solid transparent;transition:all .3s}
-.score-card.winner{background:var(--blue-light);border-color:var(--blue)}
-.score-card.loser{opacity:.5}
-.sc-icon{font-size:2.75rem;margin-bottom:10px}
-.sc-label{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted);margin-bottom:8px}
-.sc-num{font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:var(--ink);line-height:1;margin-bottom:8px}
-.score-card.winner .sc-num{color:var(--blue)}
-.winner-tag{display:inline-block;background:var(--blue);color:white;font-size:12px;font-weight:700;padding:5px 16px;border-radius:var(--r-pill);font-family:'Syne',sans-serif}
-
-.verdict{background:var(--ink);color:white;border-radius:20px;padding:2.25rem 2.5rem;margin-bottom:2rem}
-.verdict-icon{font-size:2.75rem;margin-bottom:14px}
-.verdict h3{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:14px}
-.verdict p{font-size:16px;color:rgba(255,255,255,.82);line-height:1.8;margin-bottom:10px}
+.res-header{text-align:center;padding:4rem 2rem 2.5rem;background:var(--bg-nav);border-bottom:1px solid var(--border)}
+.res-header h2{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:700;color:var(--ink);margin-bottom:.75rem;letter-spacing:-.02em}
+.res-header p{font-size:16px;color:var(--ink-muted);max-width:540px;margin:0 auto}
+.res-body{max-width:800px;margin:0 auto;padding:3rem 2rem 5rem}
+.scores-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:2rem}
+.score-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:1.875rem;text-align:center;transition:all .3s}
+.score-card.winner{background:var(--sage-bg);border-color:var(--sage-bdr)}
+.score-card.loser{opacity:.45}
+.sc-icon{font-size:2.5rem;margin-bottom:10px}
+.sc-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:8px}
+.sc-num{font-size:3.75rem;font-weight:700;color:var(--ink);line-height:1;margin-bottom:10px;letter-spacing:-.03em}
+.score-card.winner .sc-num{color:var(--sage)}
+.winner-tag{display:inline-block;background:var(--sage);color:#0D1F16;font-size:11px;font-weight:700;padding:4px 14px;border-radius:var(--r-pill);letter-spacing:.03em}
+.verdict{background:var(--bg-card);border:1px solid var(--border-md);border-radius:var(--r);padding:2rem 2.25rem;margin-bottom:2rem}
+.verdict-icon{font-size:2.5rem;margin-bottom:14px}
+.verdict h3{font-size:1.5rem;font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-.02em}
+.verdict p{font-size:15px;color:var(--ink-muted);line-height:1.8;margin-bottom:10px}
 .verdict p:last-child{margin-bottom:0}
-.verdict .reason-list{margin-top:1.25rem;display:flex;flex-direction:column;gap:.625rem}
-.reason-item{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(255,255,255,.8);line-height:1.5}
-.reason-icon{font-size:16px;flex-shrink:0;margin-top:2px}
-
-/* Analysis */
+.reason-list{margin-top:1.25rem;display:flex;flex-direction:column;gap:.75rem}
+.reason-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--ink-muted);line-height:1.55;background:var(--bg-raised);border-radius:var(--r-sm);padding:.75rem 1rem;border:1px solid var(--border)}
+.reason-icon{font-size:15px;flex-shrink:0;margin-top:1px}
 .analysis-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:2rem}
-.analysis-card{background:white;border-radius:var(--r);padding:1.625rem;border:1px solid var(--border)}
-.analysis-card h4{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-muted);margin-bottom:1.125rem}
+.analysis-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem}
+.analysis-card h4{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:1.125rem}
 .factor-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.factor-icon{font-size:17px;flex-shrink:0}
-.factor-label{font-size:14px;color:var(--ink-muted);flex:1}
-.factor-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:var(--r-pill);white-space:nowrap}
-.fb-green{background:var(--green-light);color:#007A58}
-.fb-orange{background:var(--orange-light);color:var(--orange)}
-
-/* Breakdown */
-.breakdown{background:white;border-radius:var(--r);padding:1.875rem;margin-bottom:2rem;border:1px solid var(--border)}
-.breakdown h4{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-muted);margin-bottom:1.25rem}
-.bd-row{display:grid;grid-template-columns:200px 1fr 44px;align-items:center;gap:12px;margin-bottom:12px}
+.factor-icon{font-size:15px;flex-shrink:0}
+.factor-label{font-size:13px;color:var(--ink-muted);flex:1}
+.factor-badge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:var(--r-pill);white-space:nowrap}
+.fb-sage{background:var(--sage-bg);color:var(--sage);border:1px solid var(--sage-bdr)}
+.fb-amber{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(232,168,76,.25)}
+.breakdown{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:1.75rem;margin-bottom:2rem}
+.breakdown h4{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:1.25rem}
+.bd-row{display:grid;grid-template-columns:180px 1fr 44px;align-items:center;gap:12px;margin-bottom:10px}
 .bd-label{font-size:13px;color:var(--ink-muted)}
-.bd-track{height:8px;background:var(--bg);border-radius:4px;overflow:hidden}
-.bd-fill{height:100%;border-radius:4px;transition:width .5s .1s}
-.bd-pos{background:var(--blue)}.bd-neg{background:var(--orange)}
-.bd-pct{font-size:13px;font-weight:700;text-align:right}
-
-/* AI */
-.ai-card{background:linear-gradient(135deg,var(--blue) 0%,#1020B0 100%);border-radius:20px;padding:2.25rem;margin-bottom:2rem;position:relative;overflow:hidden}
-.ai-card::before{content:'✦';position:absolute;right:1.5rem;top:1rem;font-size:5rem;color:rgba(255,255,255,.04);font-family:'Syne',sans-serif}
-.ai-tag{display:inline-block;background:rgba(255,255,255,.18);color:white;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;padding:5px 14px;border-radius:var(--r-pill);letter-spacing:.06em;margin-bottom:1rem}
-.ai-title-txt{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;color:white;margin-bottom:1rem}
-.ai-body{font-size:15px;color:rgba(255,255,255,.85);line-height:1.8}
+.bd-track{height:6px;background:var(--bg-raised);border-radius:3px;overflow:hidden}
+.bd-fill{height:100%;border-radius:3px;transition:width .5s .1s}
+.bd-pos{background:var(--sage)}.bd-neg{background:var(--amber)}
+.bd-pct{font-size:12px;font-weight:600;text-align:right}
+.ai-card{background:var(--bg-card);border:1px solid var(--sage-bdr);border-radius:var(--r);padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden}
+.ai-card::before{content:'✦';position:absolute;right:1.5rem;top:1rem;font-size:5rem;color:rgba(126,200,164,.04)}
+.ai-tag{display:inline-block;background:var(--sage-bg);color:var(--sage);font-size:11px;font-weight:600;padding:4px 12px;border-radius:var(--r-pill);letter-spacing:.06em;margin-bottom:1rem;border:1px solid var(--sage-bdr);text-transform:uppercase}
+.ai-title-txt{font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:1rem;letter-spacing:-.01em}
+.ai-body{font-size:15px;color:var(--ink-muted);line-height:1.8}
 .ai-dots{display:flex;gap:5px;align-items:center;margin-top:.5rem}
-.ai-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.5);animation:dot-p 1.2s infinite}
+.ai-dot{width:6px;height:6px;border-radius:50%;background:var(--ink-faint);animation:dot-p 1.2s infinite}
 .ai-dot:nth-child(2){animation-delay:.2s}.ai-dot:nth-child(3){animation-delay:.4s}
-@keyframes dot-p{0%,80%,100%{opacity:.2;transform:scale(.8)}40%{opacity:1;transform:scale(1)}}
-
-/* Contribute */
-.contrib-card{background:var(--orange-light);border:1px solid rgba(255,107,53,.2);border-radius:var(--r);padding:1.875rem;margin-bottom:2rem}
-.contrib-card h4{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:var(--orange);margin-bottom:.6rem}
-.contrib-card p{font-size:14px;color:var(--ink-muted);line-height:1.7;margin-bottom:1.25rem}
-.contrib-form{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end}
-.fg label{display:block;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-muted);margin-bottom:7px}
-.fg select{width:100%;padding:12px 16px;border:1.5px solid var(--border-mid);border-radius:var(--r-sm);background:white;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;color:var(--ink);outline:none;transition:border-color .2s}
-.fg select:focus{border-color:var(--blue)}
-.btn-contrib{background:var(--orange);color:white;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;padding:12px 22px;border-radius:var(--r-sm);border:none;cursor:pointer;white-space:nowrap;transition:all .2s}
-.btn-contrib:hover{background:#e55a27;transform:translateY(-1px)}
-.contrib-ok{font-size:13px;color:var(--green);font-weight:600;margin-top:.625rem;display:none}
-
-/* Community */
-.community-card{background:var(--green-light);border:1px solid rgba(0,196,140,.2);border-radius:var(--r);padding:1.875rem;margin-bottom:2rem}
-.community-card h4{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:#007A58;margin-bottom:.4rem}
-.community-card p{font-size:14px;color:var(--ink-muted);margin-bottom:1.25rem}
+@keyframes dot-p{0%,80%,100%{opacity:.25;transform:scale(.8)}40%{opacity:1;transform:scale(1)}}
+.contrib-card{background:var(--amber-bg);border:1px solid rgba(232,168,76,.2);border-radius:var(--r);padding:1.75rem;margin-bottom:2rem}
+.contrib-card h4{font-size:16px;font-weight:700;color:var(--amber);margin-bottom:.5rem}
+.contrib-card>p{font-size:14px;color:var(--ink-muted);line-height:1.7;margin-bottom:1.25rem}
+.contrib-form{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}
+.fg label{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-faint);margin-bottom:6px}
+.fg select{width:100%;padding:11px 14px;border:1px solid var(--border-md);border-radius:var(--r-sm);background:var(--bg-card);font-family:var(--font);font-size:14px;color:var(--ink);outline:none;transition:border-color .2s;appearance:none}
+.fg select:focus{border-color:var(--sage)}
+.btn-contrib{background:var(--amber);color:#1A1200;font-family:var(--font);font-size:13px;font-weight:700;padding:11px 18px;border-radius:var(--r-sm);border:none;cursor:pointer;white-space:nowrap;transition:all .2s}
+.btn-contrib:hover{opacity:.88;transform:translateY(-1px)}
+.contrib-ok{font-size:13px;color:var(--sage);font-weight:600;margin-top:.5rem;display:none}
+.community-card{background:var(--sage-bg);border:1px solid var(--sage-bdr);border-radius:var(--r);padding:1.75rem;margin-bottom:2rem}
+.community-card h4{font-size:16px;font-weight:700;color:var(--sage);margin-bottom:.4rem}
+.community-card>p{font-size:14px;color:var(--ink-muted);margin-bottom:1.25rem}
 .comm-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.cs{background:white;border-radius:var(--r-sm);padding:1.125rem;text-align:center}
-.cs-num{font-family:'Syne',sans-serif;font-size:1.875rem;font-weight:800;color:var(--green)}
-.cs-label{font-size:11px;font-weight:600;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.05em}
+.cs{background:var(--bg-card);border-radius:var(--r-sm);padding:1rem;text-align:center;border:1px solid var(--border)}
+.cs-num{font-size:1.75rem;font-weight:700;color:var(--sage);letter-spacing:-.02em}
+.cs-label{font-size:10px;font-weight:600;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em}
+.res-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:2rem}
+.btn-res{font-family:var(--font);font-size:13px;font-weight:600;padding:10px 20px;border-radius:var(--r-sm);cursor:pointer;border:1px solid var(--border-md);background:var(--bg-card);color:var(--ink-muted);transition:all .2s}
+.btn-res:hover{color:var(--ink);border-color:rgba(255,255,255,.2)}
+.btn-res-p{background:var(--sage);color:#0D1F16;border-color:var(--sage)}
+.btn-res-p:hover{background:var(--sage-dk);color:#0D1F16}
+.btn-res-b{background:var(--blue-bg);color:var(--blue);border-color:var(--blue-bdr)}
+.btn-res-b:hover{background:rgba(107,159,232,.2)}
 
-.res-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:2rem}
-.btn-res{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;padding:12px 24px;border-radius:var(--r-pill);cursor:pointer;border:2px solid var(--border-mid);background:white;color:var(--ink);transition:all .2s}
-.btn-res:hover{background:var(--blue-light);border-color:var(--blue);color:var(--blue)}
-.btn-res-p{background:var(--blue);color:white;border-color:var(--blue)}
-.btn-res-p:hover{background:var(--blue-dark);color:white}
-
-/* ════ FAQ & FOOTER ════ */
-.faq-sec{background:white;border-top:1px solid var(--border);padding:5rem 0}
-.faq-inner{max-width:720px;margin:0 auto;padding:0 2rem}
+/* ── FAQ & FOOTER ── */
+.faq-sec{border-top:1px solid var(--border);padding:5rem 0}
+.faq-inner{max-width:700px;margin:0 auto;padding:0 2rem}
 .faq-header{text-align:center;margin-bottom:3rem}
-.sec-tag{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:.75rem}
-.sec-title{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;color:var(--ink);margin-bottom:1rem}
-.faq-list{display:flex;flex-direction:column;gap:12px}
-.faq-item{background:var(--bg);border-radius:var(--r);border:1px solid var(--border);overflow:hidden}
-.faq-q{padding:1.375rem 1.625rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--ink);transition:background .2s;user-select:none}
-.faq-q:hover{background:var(--blue-light)}
-.faq-q.open{background:var(--blue-light);color:var(--blue)}
-.faq-ico{font-size:22px;font-weight:300;color:var(--ink-faint);transition:transform .3s,color .2s;flex-shrink:0}
-.faq-q.open .faq-ico{transform:rotate(45deg);color:var(--blue)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-size:15px;color:var(--ink-muted);line-height:1.75;padding:0 1.625rem}
-.faq-a.open{max-height:400px;padding:0 1.625rem 1.375rem}
-
-.cta-band{background:var(--blue);padding:5rem 2rem;text-align:center}
-.cta-band h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:white;margin-bottom:1rem}
-.cta-band p{font-size:18px;color:rgba(255,255,255,.75);max-width:520px;margin:0 auto 2rem;line-height:1.7}
-.btn-white{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;padding:17px 42px;background:white;color:var(--blue);border:none;border-radius:var(--r-pill);cursor:pointer;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.15)}
-.btn-white:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
-
-footer{background:var(--ink);padding:4rem 2rem 2rem}
+.faq-list{display:flex;flex-direction:column;gap:8px}
+.faq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.faq-q{padding:1.25rem 1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-size:15px;font-weight:600;color:var(--ink);transition:background .2s;user-select:none}
+.faq-q:hover{background:var(--bg-raised)}
+.faq-q.open{background:var(--sage-bg);color:var(--sage)}
+.faq-ico{font-size:20px;color:var(--ink-faint);transition:transform .3s,color .2s;flex-shrink:0;font-weight:300}
+.faq-q.open .faq-ico{transform:rotate(45deg);color:var(--sage)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;font-size:14px;color:var(--ink-muted);line-height:1.75;padding:0 1.5rem}
+.faq-a.open{max-height:400px;padding:0 1.5rem 1.25rem}
+.cta-band{border-top:1px solid var(--border);background:var(--bg-nav);padding:5rem 2rem;text-align:center}
+.cta-band h2{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:700;color:var(--ink);margin-bottom:1rem;letter-spacing:-.025em}
+.cta-band p{font-size:17px;color:var(--ink-muted);max-width:500px;margin:0 auto 2rem;line-height:1.7}
+.btn-cta{background:var(--sage);color:#0D1F16;font-family:var(--font);font-weight:700;font-size:15px;padding:14px 36px;border-radius:var(--r-sm);border:none;cursor:pointer;transition:all .2s;box-shadow:0 4px 20px rgba(126,200,164,.2)}
+.btn-cta:hover{background:var(--sage-dk);transform:translateY(-2px)}
+footer{background:var(--bg-nav);border-top:1px solid var(--border);padding:4rem 2rem 2rem}
 .foot-inner{max-width:1100px;margin:0 auto}
 .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
-.foot-logo{font-family:'Syne',sans-serif;font-size:23px;font-weight:800;color:white;margin-bottom:.75rem}
-.foot-logo span{color:var(--orange)}
-.foot-desc{font-size:14px;color:rgba(255,255,255,.45);line-height:1.75}
-.foot-col h5{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:white;margin-bottom:1.25rem}
+.foot-logo{font-size:20px;font-weight:700;color:var(--ink);margin-bottom:.75rem;letter-spacing:-.02em}
+.foot-logo em{font-style:normal;color:var(--sage)}
+.foot-desc{font-size:13px;color:var(--ink-faint);line-height:1.75}
+.foot-col h5{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:1.25rem}
 .foot-links{display:flex;flex-direction:column;gap:.625rem}
-.foot-link{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s;cursor:pointer}
-.foot-link:hover{color:white}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.foot-legal{font-size:13px;color:rgba(255,255,255,.3)}
+.foot-link{font-size:13px;color:var(--ink-faint);transition:color .2s;cursor:pointer}
+.foot-link:hover{color:var(--ink-muted)}
+.foot-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-legal{font-size:12px;color:var(--ink-faint)}
+
+/* ── PDF PAGE ── */
+#page-pdf{background:var(--bg)}
+.pdf-wrap{max-width:760px;margin:0 auto;padding:3rem 2rem 5rem}
+.pdf-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:1.5rem}
+.pdf-toolbar h3{font-size:16px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.pdf-toolbar p{font-size:13px;color:var(--ink-muted)}
+.pdf-toolbar-btns{display:flex;gap:10px}
+.pdf-preview{background:#FFFFFF;border-radius:var(--r);padding:3rem;box-shadow:var(--shadow-lg);margin-bottom:1.5rem;color:#1A2340;font-family:var(--font)}
+.pdf-logo-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:2px solid #1A2340}
+.pdf-logo-txt{font-size:24px;font-weight:700;color:#1A2340;letter-spacing:-.02em}
+.pdf-logo-txt em{font-style:normal;color:#2D6A4F}
+.pdf-meta{font-size:12px;color:#6B7A9B;text-align:right;line-height:1.6}
+.pdf-meta strong{color:#1A2340;font-size:13px;display:block;margin-bottom:2px}
+.pdf-title-block{text-align:center;margin-bottom:2.5rem}
+.pdf-title-block h1{font-size:1.875rem;font-weight:700;color:#1A2340;margin-bottom:.5rem;letter-spacing:-.025em}
+.pdf-rec{font-size:15px;font-weight:700;margin-top:.5rem}
+.pdf-scores{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:2rem}
+.pdf-score{background:#F5F7FB;border-radius:8px;padding:1.375rem;text-align:center;border:1.5px solid transparent}
+.pdf-score.win{background:#EAF7F0;border-color:#2D6A4F}
+.pdf-score-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#6B7A9B;margin-bottom:6px}
+.pdf-score-num{font-size:2.75rem;font-weight:700;color:#1A2340;line-height:1;letter-spacing:-.03em}
+.pdf-score.win .pdf-score-num{color:#2D6A4F}
+.pdf-verdict-box{background:#1A2340;color:white;border-radius:8px;padding:1.625rem;margin-bottom:1.75rem}
+.pdf-verdict-box h3{font-size:1.1rem;font-weight:700;margin-bottom:10px}
+.pdf-verdict-box p{font-size:13px;color:rgba(255,255,255,.82);line-height:1.7;margin-bottom:8px}
+.pdf-verdict-box p:last-child{margin-bottom:0}
+.pdf-section-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#6B7A9B;margin-bottom:.875rem;margin-top:1.625rem}
+.pdf-factors-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.25rem}
+.pdf-factor{background:#F5F7FB;border-radius:6px;padding:.75rem;display:flex;align-items:center;gap:8px}
+.pdf-factor-icon{font-size:14px}
+.pdf-factor-txt{font-size:12px;font-weight:500;color:#1A2340;flex:1}
+.pdf-factor-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px}
+.pdf-answer-row{display:flex;align-items:flex-start;gap:12px;padding:.625rem 0;border-bottom:1px solid #EEF0F5}
+.pdf-answer-row:last-child{border-bottom:none}
+.pdf-a-q{font-size:12px;color:#6B7A9B;flex:1;line-height:1.5}
+.pdf-a-r{font-size:12px;font-weight:600;color:#1A2340;text-align:right;max-width:180px;line-height:1.4}
+.pdf-footer-row{margin-top:2rem;padding-top:1.25rem;border-top:1px solid #EEF0F5;display:flex;justify-content:space-between;font-size:11px;color:#6B7A9B}
 
 /* TOAST */
-.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:white;padding:13px 26px;border-radius:var(--r-pill);font-family:'Syne',sans-serif;font-size:15px;font-weight:600;opacity:0;transition:all .35s;z-index:999;pointer-events:none;box-shadow:var(--shadow-lg)}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--bg-card);color:var(--ink);border:1px solid var(--border-md);padding:11px 22px;border-radius:var(--r-pill);font-size:14px;font-weight:500;opacity:0;transition:all .35s;z-index:999;pointer-events:none;box-shadow:var(--shadow)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
-/* ANIM */
-.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity .55s,transform .55s}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 
-/* ════ PDF PAGE ════ */
-#page-pdf{background:white;min-height:100vh}
-.pdf-wrap{max-width:760px;margin:0 auto;padding:4rem 2rem 5rem}
-.pdf-preview{background:white;border:1px solid var(--border);border-radius:20px;padding:3rem;box-shadow:var(--shadow-lg);margin-bottom:2rem}
-.pdf-logo-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:2px solid var(--blue)}
-.pdf-logo-txt{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:var(--blue)}
-.pdf-logo-txt span{color:var(--orange)}
-.pdf-meta{font-size:13px;color:var(--ink-muted);text-align:right}
-.pdf-title-block{text-align:center;margin-bottom:2.5rem}
-.pdf-title-block h1{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--ink);margin-bottom:.5rem}
-.pdf-title-block p{font-size:15px;color:var(--ink-muted)}
-.pdf-scores{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:2rem}
-.pdf-score{background:var(--bg);border-radius:var(--r);padding:1.375rem;text-align:center;border:2px solid transparent}
-.pdf-score.win{background:var(--blue-light);border-color:var(--blue)}
-.pdf-score-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-muted);margin-bottom:6px}
-.pdf-score-num{font-family:'Syne',sans-serif;font-size:2.75rem;font-weight:800;color:var(--ink);line-height:1}
-.pdf-score.win .pdf-score-num{color:var(--blue)}
-.pdf-verdict-box{background:var(--ink);color:white;border-radius:var(--r);padding:1.75rem;margin-bottom:2rem}
-.pdf-verdict-box h3{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;margin-bottom:10px}
-.pdf-verdict-box p{font-size:14px;color:rgba(255,255,255,.8);line-height:1.75;margin-bottom:8px}
-.pdf-verdict-box p:last-child{margin-bottom:0}
-.pdf-section-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted);margin-bottom:1rem;margin-top:1.75rem}
-.pdf-factors-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.5rem}
-.pdf-factor{background:var(--bg);border-radius:var(--r-sm);padding:.875rem 1rem;display:flex;align-items:center;gap:10px}
-.pdf-factor-icon{font-size:16px}
-.pdf-factor-txt{font-size:13px;font-weight:600;color:var(--ink);flex:1}
-.pdf-factor-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px}
-.pdf-answers{margin-bottom:1.5rem}
-.pdf-answer-row{display:flex;align-items:flex-start;gap:10px;padding:.75rem 0;border-bottom:1px solid var(--border)}
-.pdf-answer-row:last-child{border-bottom:none}
-.pdf-a-q{font-size:13px;color:var(--ink-muted);flex:1;line-height:1.4}
-.pdf-a-r{font-size:13px;font-weight:600;color:var(--ink);text-align:right;max-width:200px;line-height:1.4}
-.pdf-footer{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--ink-muted)}
-.pdf-actions{display:flex;gap:12px;flex-wrap:wrap}
-
-/* RESPONSIVE */
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr;text-align:center}
-  .hero-sub{margin:0 auto 2rem}
-  .hero-btns{justify-content:center}
-  .hero-right{order:-1}
-  .float-chip{display:none}
+  .hero{grid-template-columns:1fr;text-align:center;padding:4rem 2rem 3rem}
+  .hero-sub{margin:0 auto 2rem}.hero-btns{justify-content:center}
+  .hero-right{order:-1}.float-chip{display:none}
   .foot-top{grid-template-columns:1fr 1fr}
   .analysis-grid{grid-template-columns:1fr}
-  .pdf-scores{grid-template-columns:1fr 1fr}
+  .modules-grid{grid-template-columns:1fr}
   .pdf-factors-grid{grid-template-columns:1fr}
 }
 @media(max-width:640px){
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .scores-row{grid-template-columns:1fr}
-  .contrib-form{grid-template-columns:1fr}
-  .comm-stats{grid-template-columns:1fr 1fr}
-  .bd-row{grid-template-columns:110px 1fr 36px}
-  .foot-top{grid-template-columns:1fr}
+  .nav-links{display:none}.hamburger{display:flex}
+  .scores-row{grid-template-columns:1fr}.contrib-form{grid-template-columns:1fr}
+  .comm-stats{grid-template-columns:1fr 1fr}.bd-row{grid-template-columns:110px 1fr 36px}
+  .foot-top{grid-template-columns:1fr}.pdf-scores{grid-template-columns:1fr 1fr}
+  .dest-grid{grid-template-columns:1fr}
 }
-@media print{body,html{display:none}}
+@media print{body{display:none}}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <div class="logo" onclick="goHome()"><div class="logo-dot"></div>GEA<span style="color:var(--orange)">go</span></div>
+    <div class="logo" onclick="goHome()">
+      <div class="logo-dot"></div>GEA <em>Inter</em>
+    </div>
     <div class="nav-links">
       <span class="nav-link" onclick="goHome()">Accueil</span>
       <span class="nav-link" onclick="goSection('faq')">FAQ</span>
+      <span class="nav-link" onclick="startDest()">Destinations</span>
       <button class="nav-cta" onclick="startTest()">Commencer le test →</button>
     </div>
     <div class="hamburger" id="hbg" onclick="toggleNav()"><span></span><span></span><span></span></div>
@@ -338,7 +379,8 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
 <div class="mobile-nav" id="mnav">
   <span class="mobile-nav-link" onclick="goHome();toggleNav()">Accueil</span>
   <span class="mobile-nav-link" onclick="goSection('faq');toggleNav()">FAQ</span>
-  <button class="nav-cta" style="text-align:center;margin-top:1rem" onclick="startTest();toggleNav()">Commencer le test →</button>
+  <span class="mobile-nav-link" onclick="startDest();toggleNav()">Destinations</span>
+  <button class="nav-cta" style="text-align:center;margin-top:1rem" onclick="startTest();toggleNav()">Commencer →</button>
 </div>
 
 <!-- ════ HOME ════ -->
@@ -346,18 +388,18 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
   <section>
     <div class="hero">
       <div class="fade-up">
-        <div class="hero-badge"><div class="hero-badge-dot"></div>BUT GEA · 3ème année</div>
-        <h1>Partir étudier<br>à l'<span class="hi">étranger</span> ?</h1>
-        <p class="hero-sub">Une évaluation sérieuse basée sur ta situation réelle — pas un quiz. On analyse ton profil comme un conseiller le ferait avant une mobilité professionnelle.</p>
+        <div class="hero-badge">BUT GEA Vienne · 3ème année</div>
+        <h1>Partir étudier<br>à l'<em>étranger</em> ?</h1>
+        <p class="hero-sub">Une évaluation honnête basée sur ta situation réelle, et un guide personnalisé vers les 29 destinations partenaires du BUT GEA de Vienne.</p>
         <div class="hero-btns">
-          <button class="btn btn-primary" onclick="startTest()">Commencer l'évaluation →</button>
-          <button class="btn btn-outline" onclick="goSection('faq')">Questions fréquentes</button>
+          <button class="btn-hp btn-hp-p" onclick="startTest()">Évaluer mon profil →</button>
+          <button class="btn-hp btn-hp-s" onclick="startDest()">Explorer les destinations</button>
         </div>
       </div>
       <div class="hero-right fade-up" style="transition-delay:.15s">
-        <div class="float-chip fc1">🎓 Données réelles BUT GEA 2024–2025</div>
+        <div class="float-chip fc1">29 destinations partenaires</div>
         <div class="hero-card">
-          <div class="hc-label">Données communauté BUT GEA</div>
+          <div class="hc-label">Communauté BUT GEA Vienne</div>
           <div class="hc-stats">
             <div class="hc-stat"><div class="hc-num" id="h-total">—</div><div class="hc-sl">Profils</div></div>
             <div class="hc-stat"><div class="hc-num" id="h-partir">—</div><div class="hc-sl">Partis</div></div>
@@ -365,50 +407,85 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
           </div>
           <div class="hc-div"></div>
           <div class="hc-bars">
-            <div class="hc-bar-row"><span class="hc-bar-label">Satisfaction mobilité</span><div class="hc-bar-track"><div class="hc-bar-fill" style="width:74%;background:var(--green)"></div></div><span class="hc-bar-pct">74%</span></div>
-            <div class="hc-bar-row"><span class="hc-bar-label">Valeur CV perçue</span><div class="hc-bar-track"><div class="hc-bar-fill" style="width:81%;background:var(--blue)"></div></div><span class="hc-bar-pct">81%</span></div>
-            <div class="hc-bar-row"><span class="hc-bar-label">Regrettent de rester</span><div class="hc-bar-track"><div class="hc-bar-fill" style="width:38%;background:var(--orange)"></div></div><span class="hc-bar-pct">38%</span></div>
+            <div class="hc-bar-row"><span class="hc-bar-label">Satisfaction mobilité</span><div class="hc-bar-track"><div class="hc-bar-fill" style="width:74%;background:var(--sage)"></div></div><span class="hc-bar-pct">74%</span></div>
+            <div class="hc-bar-row"><span class="hc-bar-label">Valeur CV perçue</span><div class="hc-bar-track"><div class="hc-bar-fill" style="width:81%;background:var(--sage)"></div></div><span class="hc-bar-pct">81%</span></div>
+            <div class="hc-bar-row"><span class="hc-bar-label">Regrettent de rester</span><div class="hc-bar-track"><div class="hc-bar-fill" style="width:38%;background:var(--amber)"></div></div><span class="hc-bar-pct">38%</span></div>
           </div>
         </div>
-        <div class="float-chip fc2">⚡ ~12 minutes · Résultat IA</div>
+        <div class="float-chip fc2">~12 min · Résultat IA + destinations</div>
       </div>
     </div>
   </section>
   <div class="feat-band">
     <div class="feat-inner">
-      <div class="feat-item"><span>✓</span> 100% gratuit &amp; anonyme</div>
-      <div class="feat-item"><span>✓</span> Basé sur des données réelles 2024–2025</div>
-      <div class="feat-item"><span>✓</span> Analyse IA personnalisée</div>
-      <div class="feat-item"><span>✓</span> ~12 minutes</div>
-      <div class="feat-item"><span>✓</span> Résultat téléchargeable</div>
+      <div class="feat-item"><span class="feat-check">✓</span>Évaluation honnête de ton profil</div>
+      <div class="feat-item"><span class="feat-check">✓</span>Destinations personnalisées</div>
+      <div class="feat-item"><span class="feat-check">✓</span>Conseil IA sur mesure</div>
+      <div class="feat-item"><span class="feat-check">✓</span>Gratuit &amp; anonyme</div>
+      <div class="feat-item"><span class="feat-check">✓</span>Résultat téléchargeable</div>
     </div>
   </div>
+
+  <!-- Modules -->
+  <div class="modules-section">
+    <div class="modules-header fade-up">
+      <div class="sec-tag">Deux outils complémentaires</div>
+      <h2 class="sec-title">Par où veux-tu commencer ?</h2>
+      <p class="sec-sub">L'évaluation de profil et le guide destinations peuvent être utilisés séparément ou ensemble.</p>
+    </div>
+    <div class="modules-grid fade-up">
+      <div class="module-card sage" onclick="startTest()">
+        <div class="module-icon">🔍</div>
+        <div class="module-title">Évaluation de profil</div>
+        <div class="module-desc">15 questions sur ta situation réelle (finances, langue, projet pro, autonomie…) pour savoir si une mobilité est faite pour toi — et pourquoi.</div>
+        <div class="module-tags">
+          <span class="module-tag sage">~12 minutes</span>
+          <span class="module-tag sage">Conseil IA</span>
+          <span class="module-tag sage">Score objectif</span>
+        </div>
+        <div class="module-cta">Commencer l'évaluation <span class="module-arrow">→</span></div>
+      </div>
+      <div class="module-card blue" onclick="startDest()">
+        <div class="module-icon">🌍</div>
+        <div class="module-title">Guide destinations</div>
+        <div class="module-desc">Réponds à quelques questions sur tes préférences et ton profil pour obtenir une liste personnalisée des 29 destinations partenaires du BUT GEA Vienne, avec les écoles et les critères de match.</div>
+        <div class="module-tags">
+          <span class="module-tag blue">29 destinations</span>
+          <span class="module-tag blue">Europe &amp; hors Europe</span>
+          <span class="module-tag blue">Écoles partenaires</span>
+        </div>
+        <div class="module-cta" style="color:var(--blue)">Explorer les destinations <span class="module-arrow">→</span></div>
+      </div>
+    </div>
+  </div>
+
   <section class="faq-sec" id="faq">
     <div class="faq-inner">
       <div class="faq-header">
-        <div class="sec-tag">Questions fréquentes</div>
-        <h2 class="sec-title">Avant de commencer</h2>
+        <div class="sec-tag">Avant de commencer</div>
+        <h2 class="sec-title">Questions fréquentes</h2>
       </div>
       <div class="faq-list" id="faq-list"></div>
     </div>
   </section>
   <div class="cta-band">
-    <h2>Prêt à obtenir un avis honnête ?</h2>
+    <h2>Prêt à faire le point ?</h2>
     <p>~12 minutes pour une analyse complète de ta situation. Gratuit, anonyme, sans inscription.</p>
-    <button class="btn-white" onclick="startTest()">Commencer l'évaluation →</button>
+    <button class="btn-cta" onclick="startTest()">Commencer l'évaluation →</button>
   </div>
   <footer>
     <div class="foot-inner">
       <div class="foot-top">
         <div>
-          <div class="foot-logo">GEA<span>go</span></div>
-          <p class="foot-desc">Outil de décision créé dans le cadre du Projet International BUT GEA 2ème année. Données anonymisées, usage éducatif uniquement.</p>
+          <div class="foot-logo">GEA <em>Inter</em></div>
+          <p class="foot-desc">Outil de décision créé dans le cadre du Projet International BUT GEA Vienne 2ème année. Données anonymisées, usage éducatif uniquement.</p>
         </div>
         <div>
           <h5>Navigation</h5>
           <div class="foot-links">
             <span class="foot-link" onclick="goHome()">Accueil</span>
-            <span class="foot-link" onclick="startTest()">Commencer le test</span>
+            <span class="foot-link" onclick="startTest()">Évaluation profil</span>
+            <span class="foot-link" onclick="startDest()">Destinations</span>
             <span class="foot-link" onclick="goSection('faq')">FAQ</span>
           </div>
         </div>
@@ -423,14 +500,14 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
         <div>
           <h5>À propos</h5>
           <div class="foot-links">
-            <span class="foot-link">Projet International BUT GEA</span>
-            <span class="foot-link">2ème année — Groupe projet</span>
+            <span class="foot-link">BUT GEA Vienne — IUT de Vienne</span>
+            <span class="foot-link">Projet International 2ème année</span>
             <span class="foot-link">Données anonymisées</span>
           </div>
         </div>
       </div>
       <div class="foot-bottom">
-        <span class="foot-legal">© 2025 GEAgo · BUT GEA Projet International</span>
+        <span class="foot-legal">© 2025 GEA Inter · BUT GEA Vienne · Projet International</span>
         <span class="foot-legal">Outil éducatif — non affilié à une institution officielle</span>
       </div>
     </div>
@@ -446,11 +523,23 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
   <div class="test-body" id="test-body"></div>
 </div>
 
+<!-- ════ DESTINATIONS ════ -->
+<div id="page-dest" class="page">
+  <div class="dest-header">
+    <h2>Guide destinations — BUT GEA Vienne</h2>
+    <p>Réponds à quelques questions pour obtenir une liste personnalisée des destinations partenaires adaptées à ton profil.</p>
+  </div>
+  <div class="dest-body">
+    <div class="dest-quiz-wrap" id="dest-quiz"></div>
+    <div class="dest-result-wrap" id="dest-results"></div>
+  </div>
+</div>
+
 <!-- ════ LOADING ════ -->
 <div id="page-loading" class="page">
   <div class="load-icon">🔍</div>
   <div class="load-title">Analyse en cours…</div>
-  <div class="load-sub">On croise tes réponses avec les données réelles des étudiants BUT GEA partis à l'étranger depuis 2020.</div>
+  <div class="load-sub">On croise tes réponses avec les données réelles des étudiants BUT GEA partis à l'étranger.</div>
   <div class="load-steps">
     <div class="ls" id="ls0"><div class="ls-dot"></div><span>Analyse de la situation financière</span></div>
     <div class="ls" id="ls1"><div class="ls-dot"></div><span>Évaluation des compétences linguistiques</span></div>
@@ -464,7 +553,7 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
 <!-- ════ RESULTS ════ -->
 <div id="page-results" class="page">
   <div class="res-header">
-    <div style="font-size:3.25rem;margin-bottom:.875rem" id="r-emoji">🎯</div>
+    <div style="font-size:3rem;margin-bottom:.875rem" id="r-emoji">🎯</div>
     <h2 id="r-title">Voici ton évaluation</h2>
     <p id="r-sub">Basé sur l'analyse complète de ta situation</p>
   </div>
@@ -480,18 +569,15 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
       <div class="reason-list" id="v-reasons"></div>
     </div>
     <div class="analysis-grid" id="analysis-grid"></div>
-    <div class="breakdown">
-      <h4>Analyse détaillée par dimension</h4>
-      <div id="bd-rows"></div>
-    </div>
+    <div class="breakdown"><h4>Analyse détaillée par dimension</h4><div id="bd-rows"></div></div>
     <div class="ai-card">
       <div class="ai-tag">✦ Conseil IA personnalisé</div>
       <div class="ai-title-txt">Recommandation sur mesure</div>
-      <div id="ai-out"><div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.6);font-size:15px"><span>Génération en cours</span><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div></div></div>
+      <div id="ai-out"><div style="display:flex;align-items:center;gap:10px;color:var(--ink-muted);font-size:14px"><span>Génération en cours</span><div class="ai-dots"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div></div></div>
     </div>
     <div class="contrib-card">
-      <h4>📊 Améliore cet outil pour les prochaines promos</h4>
-      <p>Ta décision réelle (anonyme, optionnelle) aide à améliorer la précision de l'outil pour les futurs étudiants BUT GEA 3ème année.</p>
+      <h4>Améliore cet outil pour les prochaines promos</h4>
+      <p>Ta décision réelle (anonyme, optionnelle) aide à améliorer la précision de l'outil pour les futurs étudiants BUT GEA Vienne.</p>
       <div class="contrib-form">
         <div class="fg">
           <label>Ta décision finale</label>
@@ -509,7 +595,7 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
       <div class="contrib-ok" id="c-ok">✓ Merci pour ta contribution anonyme.</div>
     </div>
     <div class="community-card">
-      <h4>🌍 Données agrégées BUT GEA 3ème année</h4>
+      <h4>Données agrégées BUT GEA Vienne</h4>
       <p>Basé uniquement sur les réponses anonymisées des étudiants ayant utilisé cet outil.</p>
       <div class="comm-stats">
         <div class="cs"><div class="cs-num" id="cm-tot">—</div><div class="cs-label">Réponses</div></div>
@@ -519,30 +605,26 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
     </div>
     <div class="res-actions">
       <button class="btn-res" onclick="restartTest()">← Refaire l'évaluation</button>
-      <button class="btn-res btn-res-p" onclick="showPDF()">📄 Télécharger mon résultat</button>
+      <button class="btn-res btn-res-b" onclick="startDest()">🌍 Voir les destinations</button>
+      <button class="btn-res btn-res-p" onclick="showPDF()">Télécharger mon résultat →</button>
     </div>
   </div>
 </div>
 
-<!-- ════ PDF PAGE ════ -->
+<!-- ════ PDF ════ -->
 <div id="page-pdf" class="page">
   <div class="pdf-wrap">
-    <div style="margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.375rem">Aperçu de ton document</div>
-        <div style="font-size:15px;color:var(--ink-muted)">Voici exactement ce qui sera téléchargé ou imprimé.</div>
-      </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <button class="btn-res" onclick="goToResults()">← Retour aux résultats</button>
-        <button class="btn-res btn-res-p" onclick="downloadPDF()">📥 Télécharger le PDF</button>
+    <div class="pdf-toolbar">
+      <div><h3>Aperçu du document</h3><p>Voici exactement ce qui sera téléchargé.</p></div>
+      <div class="pdf-toolbar-btns">
+        <button class="btn-res" onclick="goToResults()">← Retour</button>
+        <button class="btn-res btn-res-p" onclick="downloadPDF()">Télécharger le PDF →</button>
       </div>
     </div>
-    <div class="pdf-preview" id="pdf-content">
-      <!-- Rempli dynamiquement -->
-    </div>
-    <div class="pdf-actions">
+    <div class="pdf-preview" id="pdf-content"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:1.5rem">
       <button class="btn-res" onclick="goToResults()">← Retour aux résultats</button>
-      <button class="btn-res btn-res-p" onclick="downloadPDF()">📥 Télécharger le PDF</button>
+      <button class="btn-res btn-res-p" onclick="downloadPDF()">Télécharger le PDF →</button>
     </div>
   </div>
 </div>
@@ -550,54 +632,292 @@ footer{background:var(--ink);padding:4rem 2rem 2rem}
 <div class="toast" id="toast"></div>
 
 <script>
-// ════════════════════════════════════════════
-// QUESTIONS ADAPTATIVES
-// ════════════════════════════════════════════
-// Chaque question peut avoir une propriété "followUp" :
-// tableau de {ifValue: index_réponse, questions: [...]}
-// Ces sous-questions s'insèrent dynamiquement après la réponse.
-
-const BASE_QUESTIONS = [
-
-  // ── FINANCES ──
+// ═══════════════════════════════════════════════════
+// BASE DE DONNÉES DESTINATIONS — BUT GEA VIENNE
+// ═══════════════════════════════════════════════════
+// Partenaires typiques Erasmus+ pour IUT GEA en France
+// À mettre à jour avec les vrais partenaires de l'IUT de Vienne
+const DESTINATIONS = [
+  // EUROPE
   {
-    id:'budget',
-    bloc:'💶 Situation financière',
+    id:'de', country:'Allemagne', flag:'🇩🇪', zone:'europe',
+    city:'Munich / Stuttgart', school:'Hochschule München', schoolFull:'Munich University of Applied Sciences — Faculty of Business Administration',
+    lang:['allemand','anglais'], langLevel:'B1', cost:3, difficulty:3,
+    tags:['Gestion','Finance','Commerce international'],
+    profile:{business:true, finance:true, intl:true, autonomy:3},
+    pros:['Économie solide, débouchés professionnels forts','Idéal pour projets dans l\'industrie et l\'export','Niveau allemand valorisé dans toute l\'Europe'],
+    cons:['Niveau d\'allemand B1 recommandé pour le quotidien','Coût de la vie modéré à élevé selon la ville']
+  },
+  {
+    id:'be', country:'Belgique', flag:'🇧🇪', zone:'europe',
+    city:'Bruxelles / Liège', school:'Haute École de la Province de Liège', schoolFull:'Haute École de la Province de Liège — Département Économique et Gestion',
+    lang:['français','anglais'], langLevel:'A2', cost:2, difficulty:1,
+    tags:['Gestion','Commerce','RH'],
+    profile:{business:true, social:true, autonomy:1},
+    pros:['Cours en français — pas de barrière linguistique','Destination idéale pour un premier départ à l\'étranger','Bruxelles = capital européen, réseau institutionnel unique'],
+    cons:['Moins de dépaysement culturel','Moins valorisé qu\'une destination hors Europe sur un CV international']
+  },
+  {
+    id:'bg', country:'Bulgarie', flag:'🇧🇬', zone:'europe',
+    city:'Sofia', school:'University of National and World Economy', schoolFull:'UNWE Sofia — Faculty of International Economics and Politics',
+    lang:['anglais'], langLevel:'B1', cost:1, difficulty:2,
+    tags:['Commerce international','Économie','Marketing'],
+    profile:{budget:true, intl:true, autonomy:2},
+    pros:['Coût de la vie très bas — budget minimal','Communauté Erasmus active','Bonne couverture bourse Erasmus+ (pays prioritaire)'],
+    cons:['Destination moins connue, réseau limité dans certains secteurs','Langue locale (bulgare) non valorisée en France']
+  },
+  {
+    id:'cz', country:'République tchèque', flag:'🇨🇿', zone:'europe',
+    city:'Prague', school:'Prague University of Economics and Business', schoolFull:'VŠE Prague — Faculty of Business Administration',
+    lang:['anglais','tchèque'], langLevel:'B1', cost:2, difficulty:2,
+    tags:['Business','Gestion','Finance'],
+    profile:{business:true, budget:true, culture:true, autonomy:2},
+    pros:['Prague : ville étudiante de premier rang en Europe centrale','Université reconnue en gestion et économie','Coût de la vie très abordable'],
+    cons:['Langue locale complexe pour le quotidien','Moins de réseau direct avec les entreprises françaises']
+  },
+  {
+    id:'es', country:'Espagne', flag:'🇪🇸', zone:'europe',
+    city:'Madrid / Barcelone / Séville', school:'Universidad Complutense de Madrid', schoolFull:'UCM Madrid — Facultad de Ciencias Económicas y Empresariales',
+    lang:['espagnol','anglais'], langLevel:'B1', cost:2, difficulty:2,
+    tags:['Gestion','Marketing','Commerce'],
+    profile:{business:true, social:true, culture:true, autonomy:2},
+    pros:['Destination la plus populaire en Erasmus — réseau immense','Apprentissage de l\'espagnol : 3ème langue professionnelle mondiale','Coût de la vie raisonnable'],
+    cons:['Risque de rester dans une "bulle française"','Bourse Erasmus légèrement inférieure (pays de niveau similaire à la France)']
+  },
+  {
+    id:'it', country:'Italie', flag:'🇮🇹', zone:'europe',
+    city:'Milan / Bologne / Turin', school:'Università degli Studi di Bologna', schoolFull:'Università di Bologna — Dipartimento di Scienze Aziendali',
+    lang:['italien','anglais'], langLevel:'B1', cost:2, difficulty:2,
+    tags:['Business','Finance','Mode & Luxe'],
+    profile:{business:true, finance:true, culture:true, autonomy:2},
+    pros:['Bologna : la plus ancienne université d\'Europe, reconnue mondialement','Milan : capitale économique, réseau finance/mode/luxe exceptionnel','Apprentissage de l\'italien valorisé dans certains secteurs'],
+    cons:['Administration universitaire parfois complexe','Bureaucratie locale peut être déroutante']
+  },
+  {
+    id:'ie', country:'Irlande', flag:'🇮🇪', zone:'europe',
+    city:'Dublin', school:'Dublin Business School', schoolFull:'Dublin Business School — School of Business',
+    lang:['anglais'], langLevel:'B2', cost:4, difficulty:2,
+    tags:['Business','Finance','Tech'],
+    profile:{business:true, finance:true, intl:true, english:true, autonomy:3},
+    pros:['Dublin = hub européen des entreprises tech (Google, Meta, Apple)','Immersion anglaise totale en environnement professionnel','Réseau anglophone à très forte valeur ajoutée'],
+    cons:['Coût de la vie élevé — parmi les plus chers d\'Europe','Niveau B2 minimum recommandé pour être à l\'aise']
+  },
+  {
+    id:'lv', country:'Lettonie', flag:'🇱🇻', zone:'europe',
+    city:'Riga', school:'Riga Technical University', schoolFull:'RTU — Faculty of Engineering Economics and Management',
+    lang:['anglais','letton'], langLevel:'B1', cost:1, difficulty:2,
+    tags:['Gestion','Ingénierie','Commerce'],
+    profile:{budget:true, autonomy:3, intl:true},
+    pros:['Coût de la vie extrêmement bas','Bourse Erasmus+ maximale (pays prioritaire)','Riga : capitale dynamique, architecture exceptionnelle'],
+    cons:['Destination moins connue des recruteurs français','Réseau professionnel limité avec la France']
+  },
+  {
+    id:'fi', country:'Finlande', flag:'🇫🇮', zone:'europe',
+    city:'Helsinki / Turku', school:'Haaga-Helia University of Applied Sciences', schoolFull:'Haaga-Helia UAS — School of Business',
+    lang:['anglais','finnois'], langLevel:'B2', cost:3, difficulty:3,
+    tags:['Business','Innovation','Développement durable'],
+    profile:{business:true, intl:true, english:true, autonomy:4},
+    pros:['Système éducatif réputé parmi les meilleurs au monde','Forte culture de l\'innovation et du développement durable','Cours exclusivement en anglais — immersion totale'],
+    cons:['Coût de la vie élevé','Hiver rigoureux — facteur d\'isolement pour certains','Distance géographique importante depuis la France']
+  },
+  {
+    id:'pt', country:'Portugal', flag:'🇵🇹', zone:'europe',
+    city:'Lisbonne / Porto', school:'ISCTE — Instituto Universitário de Lisboa', schoolFull:'ISCTE Lisboa — Escola de Gestão',
+    lang:['portugais','anglais'], langLevel:'B1', cost:2, difficulty:2,
+    tags:['Gestion','Commerce','Start-up'],
+    profile:{business:true, budget:true, social:true, autonomy:2},
+    pros:['Lisbonne : écosystème start-up en plein essor, Web Summit chaque année','Langue latine proche du français — progression rapide','Qualité de vie exceptionnelle, coût abordable'],
+    cons:['Tension sur le marché du logement à Lisbonne','Réseau moins développé dans les grandes industries françaises']
+  },
+  {
+    id:'pl', country:'Pologne', flag:'🇵🇱', zone:'europe',
+    city:'Varsovie / Cracovie', school:'Warsaw School of Economics', schoolFull:'SGH Warsaw School of Economics — Management and Finance Programs',
+    lang:['anglais','polonais'], langLevel:'B1', cost:1, difficulty:2,
+    tags:['Finance','Économie','Commerce'],
+    profile:{finance:true, budget:true, intl:true, autonomy:2},
+    pros:['SGH Varsovie : meilleure école de gestion d\'Europe centrale','Coût de la vie très bas avec bonne bourse Erasmus+','Économie dynamique, opportunités en finance et logistique'],
+    cons:['Langue polonaise complexe pour le quotidien','Distance culturelle plus marquée que pour l\'Europe du Sud']
+  },
+  {
+    id:'ro', country:'Roumanie', flag:'🇷🇴', zone:'europe',
+    city:'Bucarest / Cluj-Napoca', school:'Academy of Economic Studies of Bucharest', schoolFull:'ASE Bucarest — Faculty of Commerce',
+    lang:['roumain','anglais'], langLevel:'B1', cost:1, difficulty:2,
+    tags:['Commerce','Marketing','Économie'],
+    profile:{budget:true, intl:true, autonomy:2},
+    pros:['Coût de la vie parmi les plus bas d\'Europe','Bourse Erasmus+ maximale','Roumain : langue latine proche du français'],
+    cons:['Réseau professionnel limité avec la France','Destination méconnue — demande de l\'initiative pour s\'intégrer']
+  },
+  {
+    id:'sk', country:'Slovaquie', flag:'🇸🇰', zone:'europe',
+    city:'Bratislava', school:'University of Economics Bratislava', schoolFull:'EUBA Bratislava — Faculty of Commerce',
+    lang:['anglais','slovaque'], langLevel:'B1', cost:1, difficulty:2,
+    tags:['Commerce','Économie','Gestion'],
+    profile:{budget:true, intl:true, autonomy:2},
+    pros:['Bratislava : capitale à 1h de Vienne — localisation centrale','Coût de la vie très bas','Bourse Erasmus+ maximale'],
+    cons:['Réseau professionnel limité avec la France','Destination peu connue des recruteurs français']
+  },
+  // HORS EUROPE
+  {
+    id:'ar', country:'Argentine', flag:'🇦🇷', zone:'horsEurope',
+    city:'Buenos Aires', school:'Universidad de Buenos Aires', schoolFull:'UBA — Facultad de Ciencias Económicas',
+    lang:['espagnol'], langLevel:'B1', cost:1, difficulty:4,
+    tags:['Commerce international','Marchés émergents','Culture'],
+    profile:{intl:true, adventure:true, social:true, autonomy:4, budget:true},
+    pros:['UBA : université publique de référence en Amérique latine','Niveau de vie très bas pour les étudiants étrangers','Immersion culturelle totale, dépaysement maximal'],
+    cons:['Instabilité économique et monétaire du pays','Nécessite un niveau B1-B2 en espagnol','Distance géographique : 11 000 km de la France']
+  },
+  {
+    id:'ca', country:'Canada', flag:'🇨🇦', zone:'horsEurope',
+    city:'Montréal / Québec', school:'HEC Montréal', schoolFull:'HEC Montréal — École affiliée à l\'Université de Montréal',
+    lang:['français','anglais'], langLevel:'A2', cost:3, difficulty:2,
+    tags:['Gestion','Finance','Business'],
+    profile:{business:true, finance:true, intl:true, autonomy:3},
+    pros:['HEC Montréal : une des meilleures écoles de gestion d\'Amérique du Nord','Cours en français possibles — idéal pour progresser vers l\'anglais','Marché du travail dynamique, portes ouvertes vers l\'Amérique du Nord'],
+    cons:['Coût de la vie élevé (surtout logement à Montréal)','Visa et démarches administratives plus complexes qu\'en Europe']
+  },
+  {
+    id:'pe', country:'Pérou', flag:'🇵🇪', zone:'horsEurope',
+    city:'Lima', school:'Universidad del Pacífico', schoolFull:'Universidad del Pacífico Lima — Facultad de Administración y Contabilidad',
+    lang:['espagnol'], langLevel:'B1', cost:1, difficulty:4,
+    tags:['Commerce','Marchés émergents','Développement'],
+    profile:{intl:true, adventure:true, autonomy:4, budget:true},
+    pros:['Universidad del Pacífico : référence régionale en gestion','Coût de la vie très bas','Expérience unique sur un marché émergent stratégique'],
+    cons:['Nécessite B1 minimum en espagnol','Contexte sécuritaire à prendre en compte selon les zones','Distance et décalage horaire importants']
+  },
+  {
+    id:'au', country:'Australie', flag:'🇦🇺', zone:'horsEurope',
+    city:'Melbourne / Sydney', school:'University of Melbourne', schoolFull:'University of Melbourne — Melbourne Business School',
+    lang:['anglais'], langLevel:'B2', cost:5, difficulty:3,
+    tags:['Business','Finance','International'],
+    profile:{english:true, intl:true, finance:true, autonomy:4},
+    pros:['Melbourne : classée parmi les meilleures villes étudiantes au monde','Anglais professionnel dans un cadre multiculturel exceptionnel','Melbourne Business School : reconnaissance internationale forte'],
+    cons:['Coût de la vie très élevé — destination la plus chère du réseau','Niveau B2 minimum indispensable','Distance extrême : 16 000 km, décalage horaire de 9–11h']
+  },
+  {
+    id:'cn', country:'Chine', flag:'🇨🇳', zone:'horsEurope',
+    city:'Shanghai / Pékin', school:'Shanghai University of Finance and Economics', schoolFull:'SUFE Shanghai — School of International Business Administration',
+    lang:['anglais','mandarin'], langLevel:'B1', cost:2, difficulty:5,
+    tags:['Commerce international','Finance','Asie'],
+    profile:{intl:true, finance:true, adventure:true, autonomy:5},
+    pros:['Marché chinois incontournable pour toute carrière internationale','SUFE Shanghai : top école de finance en Asie','Expérience très différenciante sur un CV'],
+    cons:['Barrière culturelle et linguistique très forte','Environnement internet restreint (VPN nécessaire)','Nécessite un niveau d\'autonomie élevé']
+  },
+  {
+    id:'in', country:'Inde', flag:'🇮🇳', zone:'horsEurope',
+    city:'Mumbai / Bangalore', school:'SP Jain Institute of Management and Research', schoolFull:'SP Jain SIMR Mumbai — Global Management Programs',
+    lang:['anglais','hindi'], langLevel:'B2', cost:1, difficulty:5,
+    tags:['Management','Marchés émergents','Tech'],
+    profile:{intl:true, adventure:true, english:true, autonomy:5},
+    pros:['SP Jain : référence mondiale pour le management en marchés émergents','Coût de la vie très bas','Inde : 3ème économie mondiale, marché stratégique pour les prochaines décennies'],
+    cons:['Défi logistique, administratif et culturel très élevé','Niveau d\'autonomie élevé indispensable','Conditions sanitaires et sécuritaires à bien préparer']
+  },
+];
+
+// ═══════════════════════════════════════════════════
+// QUESTIONS DESTINATIONS (guide destinations)
+// ═══════════════════════════════════════════════════
+const DEST_QUESTIONS = [
+  {
+    id:'dq_zone',
+    title:'Dans quelle zone géographique tu envisages de partir ?',
+    subtitle:'Pas de bonne réponse — c\'est une question de projet et d\'envie.',
+    options:[
+      {l:'Europe seulement', d:'Destination accessible, coûts maîtrisés, retours facilités.', val:'europe'},
+      {l:'Hors Europe seulement', d:'Argentine, Canada, Pérou, Australie, Chine ou Inde.', val:'horsEurope'},
+      {l:'Les deux — je veux voir toutes les options', d:'Je n\'ai pas encore de préférence géographique.', val:'all'},
+    ]
+  },
+  {
+    id:'dq_lang',
+    title:'Quelle est ta langue de travail préférée à l\'étranger ?',
+    subtitle:'La langue d\'enseignement impacte directement le confort et la réussite du séjour.',
+    options:[
+      {l:'Anglais — je préfère une immersion anglophone', d:'Irlande, Finlande, Australie, Inde, Canada (anglophone)…', val:'english'},
+      {l:'Langue latine (espagnol, portugais, italien)', d:'Espagne, Portugal, Italie, Argentine, Pérou…', val:'latin'},
+      {l:'Français possible ou proche', d:'Belgique, Canada (Montréal), Roumanie…', val:'french'},
+      {l:'Peu importe — je m\'adapte', d:'Je suis ouvert à toutes les langues.', val:'any'},
+    ]
+  },
+  {
+    id:'dq_budget',
+    title:'Quel est ton budget mensuel net disponible pour le séjour (après bourse) ?',
+    subtitle:'Estimation honnête de ce que tu peux mobiliser chaque mois une fois sur place.',
+    options:[
+      {l:'Moins de 300€/mois net', d:'Je mise sur des destinations à très faible coût de la vie.', val:'low'},
+      {l:'300 à 600€/mois net', d:'Destinations européennes moyennes bien couvertes.', val:'mid'},
+      {l:'600 à 1 000€/mois net', d:'Toutes les destinations européennes et certaines hors Europe.', val:'high'},
+      {l:'Plus de 1 000€/mois net', d:'Toutes les destinations y compris les plus onéreuses.', val:'vhigh'},
+    ]
+  },
+  {
+    id:'dq_profile',
+    title:'Quel type de profil correspond le mieux à ton projet professionnel ?',
+    subtitle:'Plusieurs réponses possibles — choisis celle qui correspond le mieux à ton objectif principal.',
+    options:[
+      {l:'Finance, banque, comptabilité', d:'Je veux développer des compétences techniques en finance.', val:'finance'},
+      {l:'Commerce international, export, marketing', d:'Je veux travailler sur des marchés étrangers.', val:'intl'},
+      {l:'Gestion d\'entreprise généraliste', d:'Management, RH, organisation.', val:'business'},
+      {l:'Start-up, innovation, tech', d:'Je veux être dans un écosystème dynamique et innovant.', val:'startup'},
+      {l:'Développement, marchés émergents', d:'Je veux comprendre des marchés en forte croissance.', val:'emerging'},
+    ]
+  },
+  {
+    id:'dq_adventure',
+    title:'Quel niveau de dépaysement et d\'aventure tu recherches ?',
+    subtitle:'Être honnête ici évite de se retrouver dans une situation difficile à gérer.',
+    options:[
+      {l:'Dépaysement minimal — je veux rester dans ma zone de confort', d:'Je préfère les pays proches culturellement de la France.', val:'low'},
+      {l:'Dépaysement modéré — je veux voyager sans prise de risque excessive', d:'Europe du Sud, Europe centrale.', val:'mid'},
+      {l:'Dépaysement fort — je veux vraiment sortir de ma zone', d:'Europe du Nord, Amérique latine, Canada.', val:'high'},
+      {l:'Immersion totale — je cherche le challenge culturel maximal', d:'Chine, Inde, Australie, destinations les plus éloignées.', val:'max'},
+    ]
+  },
+  {
+    id:'dq_duration',
+    title:'Pour quelle durée tu envisages ta mobilité ?',
+    subtitle:'La durée impacte le choix de la destination et la préparation nécessaire.',
+    options:[
+      {l:'Un semestre (4–5 mois)', d:'Le format le plus courant en Erasmus — accessible à la plupart des profils.', val:'semester'},
+      {l:'Une année complète (9–10 mois)', d:'Immersion profonde, mais nécessite une plus grande autonomie et préparation.', val:'year'},
+      {l:'Je ne sais pas encore', d:'La durée n\'est pas encore fixée.', val:'unknown'},
+    ]
+  },
+];
+
+// ═══════════════════════════════════════════════════
+// QUESTIONS ÉVALUATION PROFIL
+// ═══════════════════════════════════════════════════
+const BASE_QUESTIONS = [
+  {
+    id:'budget', bloc:'Situation financière',
     title:'Quelle est ta capacité financière mensuelle disponible pour un séjour à l\'étranger ?',
-    subtitle:'Ce que tu peux mobiliser personnellement (épargne personnelle, aide familiale, petits boulots) après déduction de tes charges fixes en France.',
+    subtitle:'Ce que tu peux mobiliser personnellement après déduction de tes charges fixes en France.',
     context:'Données réelles 2024-2025 : le surcoût mensuel moyen d\'un étudiant BUT GEA en Erasmus est de +200 à +500€ selon la destination, après bourse. La bourse Erasmus+ couvre 310–800€/mois selon le pays. Sources : Campus France, ERASMUS+ National Agency France.',
     weight:3, dim:'financier',
     options:[
       {l:'Moins de 200€/mois', d:'Je n\'ai pas de marge. Même avec les aides, le surcoût serait difficile à absorber.', p:0, r:10},
       {l:'200 à 400€/mois', d:'Je peux couvrir partiellement. Destinations économiques (Espagne, Portugal, Pologne) envisageables avec la bourse.', p:4, r:7},
-      {l:'400 à 700€/mois', d:'Avec la bourse Erasmus+, je couvre la majorité des frais pour la plupart des destinations européennes.', p:7, r:4},
-      {l:'Plus de 700€/mois', d:'Je peux financer sans contrainte majeure, y compris des destinations à coût élevé (Dublin, Amsterdam).', p:10, r:1},
+      {l:'400 à 700€/mois', d:'Avec la bourse Erasmus+, je couvre la majorité des frais pour la plupart des destinations.', p:7, r:4},
+      {l:'Plus de 700€/mois', d:'Je peux financer sans contrainte majeure, y compris des destinations à coût élevé.', p:10, r:1},
     ],
-    followUp:[
-      {ifValue:0, questions:[
-        {
-          id:'budget_low_solution',
-          bloc:'💶 Situation financière',
-          title:'As-tu déjà exploré les aides disponibles pour financer ta mobilité ?',
-          subtitle:'Bourse Erasmus+, aides régionales, aides de l\'IUT, bourse sur critères sociaux majorée...',
-          weight:1.5, dim:'financier',
-          options:[
-            {l:'Non, je ne savais pas que ça existait', d:'Il y a probablement des options que tu n\'as pas encore considérées.', p:5, r:4},
-            {l:'Oui, j\'ai regardé mais ça ne suffirait pas', d:'La contrainte financière est réelle même après aides.', p:2, r:8},
-            {l:'J\'explore actuellement les possibilités', d:'La situation est potentiellement plus favorable qu\'elle n\'y paraît.', p:6, r:4},
-          ]
-        }
-      ]}
-    ]
+    followUp:[{ifValue:0,questions:[{
+      id:'budget_low',bloc:'Situation financière',
+      title:'As-tu exploré les aides disponibles pour financer ta mobilité ?',
+      subtitle:'Bourse Erasmus+, aides régionales, bourse sur critères sociaux majorée...',
+      weight:1.5,dim:'financier',
+      options:[
+        {l:'Non, je ne savais pas que ça existait', d:'Il y a probablement des options que tu n\'as pas encore considérées.', p:5, r:4},
+        {l:'Oui, j\'ai regardé mais ça ne suffirait pas', d:'La contrainte financière est réelle même après aides.', p:2, r:8},
+        {l:'J\'explore actuellement les possibilités', d:'La situation est potentiellement plus favorable qu\'elle n\'y paraît.', p:6, r:4},
+      ]
+    }]}]
   },
-
   {
-    id:'filet',
-    bloc:'💶 Situation financière',
+    id:'filet',bloc:'Situation financière',
     title:'As-tu une épargne de sécurité en cas d\'imprévu à l\'étranger ?',
     subtitle:'Urgence médicale, panne matériel, retour anticipé, caution logement…',
     context:'Estimation terrain : une caution de logement représente 1–2 mois de loyer (300–900€ selon la ville). Un rapatriement médical non assuré coûte en moyenne 800–2 000€. Source : LMDE 2023.',
-    weight:2, dim:'financier',
+    weight:2,dim:'financier',
     options:[
       {l:'Aucune réserve', d:'Un imprévu serait difficile à absorber financièrement.', p:1, r:9},
       {l:'Moins de 1 000€', d:'Une petite réserve, insuffisante pour les imprévus majeurs.', p:4, r:6},
@@ -605,137 +925,108 @@ const BASE_QUESTIONS = [
       {l:'Plus de 3 000€', d:'Je suis serein : je peux faire face à n\'importe quel imprévu.', p:10, r:1},
     ]
   },
-
-  // ── LANGUE ──
   {
-    id:'langue',
-    bloc:'🗣️ Compétences linguistiques',
+    id:'langue',bloc:'Compétences linguistiques',
     title:'Quel est ton niveau réel en anglais (ou dans la langue de la destination visée) ?',
-    subtitle:'Pas ton niveau scolaire théorique — ton niveau pratique face à un propriétaire étranger, un professeur ou une administration.',
+    subtitle:'Pas ton niveau scolaire théorique — ce que tu ferais concrètement face à un propriétaire étranger ou un professeur.',
     context:'Le niveau B1 est le seuil minimal recommandé. 89% des étudiants en mobilité Erasmus déclarent avoir progressé d\'au moins un niveau CECRL en 6 mois. Source : rapport ERASMUS+ France 2023.',
-    weight:2.5, dim:'linguistique',
+    weight:2.5,dim:'linguistique',
     options:[
-      {l:'A1-A2 — Débutant', d:'Je comprends peu et m\'exprime difficilement. Une conversation basique est compliquée.', p:1, r:9},
+      {l:'A1-A2 — Débutant', d:'Je comprends peu et m\'exprime difficilement dans des situations concrètes.', p:1, r:9},
       {l:'B1 — Intermédiaire', d:'Je comprends les grandes lignes et me débrouille dans les situations courantes.', p:5, r:5},
       {l:'B2 — Intermédiaire avancé', d:'Je m\'exprime avec aisance et peux suivre un cours en anglais.', p:8, r:2},
       {l:'C1-C2 — Courant', d:'Je peux suivre, argumenter et négocier sans difficulté.', p:10, r:1},
     ],
-    followUp:[
-      {ifValue:0, questions:[
-        {
-          id:'langue_low_plan',
-          bloc:'🗣️ Compétences linguistiques',
-          title:'As-tu un plan pour améliorer ton niveau avant le départ ?',
-          subtitle:'Il est possible de passer de A2 à B1 en 6 mois avec un travail régulier (applications, cours en ligne, échanges linguistiques).',
-          weight:1.5, dim:'linguistique',
-          options:[
-            {l:'Non, je n\'ai pas commencé', d:'Sans préparation active, le niveau A2 rend une mobilité très risquée.', p:1, r:8},
-            {l:'Oui, j\'ai prévu de m\'y mettre', d:'L\'intention existe mais sans plan concret, c\'est fragile.', p:3, r:6},
-            {l:'Oui, je suis déjà en train de progresser', d:'Avec 6 mois de travail sérieux, le B1 est atteignable.', p:6, r:4},
-          ]
-        }
-      ]}
-    ]
+    followUp:[{ifValue:0,questions:[{
+      id:'langue_plan',bloc:'Compétences linguistiques',
+      title:'As-tu un plan concret pour améliorer ton niveau avant le départ ?',
+      subtitle:'Il est possible de passer de A2 à B1 en 6 mois avec un travail régulier.',
+      weight:1.5,dim:'linguistique',
+      options:[
+        {l:'Non, je n\'ai pas commencé', d:'Sans préparation active, le niveau A2 rend une mobilité très risquée.', p:1, r:8},
+        {l:'Oui, j\'ai prévu de m\'y mettre', d:'L\'intention existe mais sans plan concret, c\'est fragile.', p:3, r:6},
+        {l:'Oui, je suis déjà en train de progresser', d:'Avec 6 mois de travail sérieux, le B1 est atteignable.', p:6, r:4},
+      ]
+    }]}]
   },
-
   {
-    id:'resilience_langue',
-    bloc:'🗣️ Compétences linguistiques',
+    id:'resilience_langue',bloc:'Compétences linguistiques',
     title:'Comment réagis-tu quand la barrière de la langue te bloque dans une situation concrète ?',
-    subtitle:'Pense à une vraie situation : régler un litige, comprendre un document administratif, te défendre dans un désaccord.',
-    weight:1.5, dim:'linguistique',
+    subtitle:'Pense à une vraie situation : régler un litige, comprendre un document administratif.',
+    weight:1.5,dim:'linguistique',
     options:[
-      {l:'Ça me paralyse — je fuis ce type de situations', d:'La barrière linguistique est un frein fort à mon quotidien.', p:1, r:8},
+      {l:'Ça me paralyse — je fuis ce type de situations', d:'La barrière linguistique est un frein fort.', p:1, r:8},
       {l:'C\'est dur mais je me force si nécessaire', d:'Je peux le faire mais c\'est coûteux en énergie.', p:5, r:5},
       {l:'Je trouve des solutions et je surmonte', d:'Une barrière linguistique ne me décourage pas.', p:8, r:2},
-      {l:'C\'est un challenge que j\'apprécies', d:'La langue est une motivation en soi pour moi.', p:10, r:1},
+      {l:'C\'est un challenge que j\'apprécie', d:'La langue est une motivation en soi pour moi.', p:10, r:1},
     ]
   },
-
-  // ── PROJET PRO ──
   {
-    id:'projet_pro',
-    bloc:'🎯 Projet professionnel',
+    id:'projet_pro',bloc:'Projet professionnel',
     title:'Ton projet professionnel implique-t-il une dimension internationale ?',
-    subtitle:'Dans les 3 à 5 ans après ton diplôme — pas "peut-être un jour" mais ce que tu envisages concrètement.',
+    subtitle:'Dans les 3 à 5 ans après ton diplôme — ce que tu envisages concrètement.',
     context:'43% des offres cadres en gestion/commerce mentionnent l\'anglais courant comme requis. Un séjour à l\'étranger augmente de 34% la probabilité d\'être recruté dans une entreprise internationale dans les 2 ans. Sources : Apec 2024, CEREQ 2023.',
-    weight:3.5, dim:'projet_pro',
+    weight:3.5,dim:'projet_pro',
     options:[
-      {l:'Non, je vise un marché local ou régional', d:'PME locale, commerce de proximité, secteur public. L\'international n\'est pas dans mon radar.', p:1, r:9},
+      {l:'Non, je vise un marché local ou régional', d:'PME locale, commerce de proximité, secteur public.', p:1, r:9},
       {l:'Peut-être, mais mon projet est encore flou', d:'L\'international pourrait être intéressant mais rien n\'est défini.', p:4, r:6},
-      {l:'Oui, je vise une entreprise nationale avec activités internationales', d:'Grande entreprise française, groupe, export. L\'anglais et la culture internationale sont des atouts.', p:7, r:3},
-      {l:'Oui, je vise directement l\'international', d:'Multinationale, poste à l\'étranger, entrepreneuriat international, ONG.', p:10, r:1},
+      {l:'Oui, je vise une entreprise nationale avec activités internationales', d:'Grande entreprise française, groupe, export.', p:7, r:3},
+      {l:'Oui, je vise directement l\'international', d:'Multinationale, poste à l\'étranger, entrepreneuriat international.', p:10, r:1},
     ],
     followUp:[
-      {ifValue:1, questions:[
-        {
-          id:'projet_flou_actions',
-          bloc:'🎯 Projet professionnel',
-          title:'Qu\'est-ce qui explique que ton projet professionnel soit encore flou ?',
-          subtitle:'C\'est une question normale à ce stade — l\'important est de comprendre pourquoi.',
-          weight:1.5, dim:'projet_pro',
-          options:[
-            {l:'Je n\'ai pas encore suffisamment exploré les débouchés', d:'Un projet flou par manque d\'information — la mobilité peut justement clarifier cela.', p:6, r:4},
-            {l:'Je suis indécis entre plusieurs directions dont certaines internationales', d:'L\'indécision intègre l\'international — signe d\'une vraie curiosité pour cette voie.', p:7, r:3},
-            {l:'Je préfère construire mon projet en France avant de penser à l\'international', d:'Une stratégie de consolidation locale avant ouverture internationale.', p:3, r:7},
-          ]
-        }
-      ]},
-      {ifValue:2, questions:[
-        {
-          id:'projet_national_valeur_cv',
-          bloc:'🎯 Projet professionnel',
-          title:'Dans le secteur précis que tu vises, est-ce que les recruteurs valorisent une expérience internationale ?',
-          subtitle:'Ce n\'est pas universel — ça dépend vraiment du secteur et du type d\'entreprise.',
-          weight:1.5, dim:'projet_pro',
-          options:[
-            {l:'Oui, c\'est clairement valorisé dans mon secteur', d:'Ton profil cible des postes où la mobilité est un vrai différenciateur.', p:8, r:2},
-            {l:'Partiellement — c\'est un plus mais pas décisif', d:'La mobilité ajoute de la valeur sans être indispensable.', p:6, r:4},
-            {l:'Non, les recruteurs que je vise ne regardent pas ce critère', d:'Le retour sur investissement d\'une mobilité est plus faible dans ce cas.', p:3, r:7},
-          ]
-        }
-      ]}
+      {ifValue:1,questions:[{
+        id:'projet_flou',bloc:'Projet professionnel',
+        title:'Qu\'est-ce qui explique que ton projet soit encore flou ?',
+        subtitle:'C\'est normal à ce stade — l\'important est de comprendre pourquoi.',
+        weight:1.5,dim:'projet_pro',
+        options:[
+          {l:'Je n\'ai pas encore suffisamment exploré les débouchés', d:'La mobilité peut justement clarifier cela.', p:6, r:4},
+          {l:'Je suis indécis entre plusieurs directions dont certaines internationales', d:'Signe d\'une vraie curiosité pour cette voie.', p:7, r:3},
+          {l:'Je préfère consolider mon projet en France avant', d:'Une stratégie de consolidation locale avant ouverture internationale.', p:3, r:7},
+        ]
+      }]},
+      {ifValue:2,questions:[{
+        id:'projet_national_cv',bloc:'Projet professionnel',
+        title:'Dans le secteur précis que tu vises, les recruteurs valorisent-ils une expérience internationale ?',
+        subtitle:'Ce n\'est pas universel — ça dépend vraiment du secteur.',
+        weight:1.5,dim:'projet_pro',
+        options:[
+          {l:'Oui, c\'est clairement valorisé dans mon secteur', d:'La mobilité est un vrai différenciateur dans ton domaine.', p:8, r:2},
+          {l:'Partiellement — c\'est un plus mais pas décisif', d:'La mobilité ajoute de la valeur sans être indispensable.', p:6, r:4},
+          {l:'Non, les recruteurs que je vise ne regardent pas ce critère', d:'Le retour sur investissement d\'une mobilité est plus faible dans ce cas.', p:3, r:7},
+        ]
+      }]}
     ]
   },
-
-  // ── SITUATION PERSONNELLE ──
   {
-    id:'contrainte',
-    bloc:'👨‍👩‍👧 Situation personnelle',
+    id:'contrainte',bloc:'Situation personnelle',
     title:'As-tu des contraintes personnelles fortes qui compliquent une absence de 6 à 12 mois ?',
     subtitle:'Maladie d\'un proche, garde d\'enfant, aidant familial, relation sérieuse, engagement régulier…',
-    weight:2.5, dim:'personnel',
+    weight:2.5,dim:'personnel',
     options:[
       {l:'Oui, une contrainte majeure et incompressible', d:'Ma présence est nécessaire. Partir 6 mois mettrait quelqu\'un en difficulté réelle.', p:0, r:10},
-      {l:'Oui, une contrainte réelle mais gérable', d:'C\'est compliqué mais des solutions existent (organisation, destinations proches, mobilité courte).', p:4, r:6},
-      {l:'Une contrainte légère (relation, habitudes, confort)', d:'Ce n\'est pas une contrainte objective — plutôt une résistance émotionnelle.', p:7, r:3},
-      {l:'Aucune contrainte majeure', d:'Je suis libre de partir sans impact significatif sur mon entourage.', p:10, r:1},
+      {l:'Oui, une contrainte réelle mais gérable', d:'C\'est compliqué mais des solutions existent.', p:4, r:6},
+      {l:'Une résistance émotionnelle (relation, habitudes, confort)', d:'Ce n\'est pas une contrainte objective — plutôt une résistance à l\'inconnu.', p:7, r:3},
+      {l:'Aucune contrainte majeure', d:'Je suis libre de partir sans impact significatif.', p:10, r:1},
     ],
-    followUp:[
-      {ifValue:0, questions:[
-        {
-          id:'contrainte_maj_alternatives',
-          bloc:'👨‍👩‍👧 Situation personnelle',
-          title:'Cette contrainte serait-elle compatible avec une mobilité courte (3 à 4 semaines) ou une destination proche (<3h) ?',
-          subtitle:'Espagne, Belgique, Suisse, Allemagne — une contrainte forte ne ferme pas toutes les options.',
-          weight:1, dim:'personnel',
-          options:[
-            {l:'Non, même une courte absence est très difficile', d:'La contrainte est totalement incompatible avec une mobilité.', p:0, r:10},
-            {l:'Oui, une mobilité courte serait envisageable', d:'Une alternative court terme peut préserver une expérience internationale.', p:4, r:5},
-            {l:'Oui, une destination proche permettrait des allers-retours', d:'La contrainte est gérable avec la bonne destination.', p:6, r:4},
-          ]
-        }
-      ]}
-    ]
+    followUp:[{ifValue:0,questions:[{
+      id:'contrainte_alt',bloc:'Situation personnelle',
+      title:'Cette contrainte serait-elle compatible avec une mobilité courte ou une destination proche ?',
+      subtitle:'Belgique, Espagne, Portugal — proches géographiquement.',
+      weight:1,dim:'personnel',
+      options:[
+        {l:'Non, même une courte absence est très difficile', d:'La contrainte est totalement incompatible avec une mobilité.', p:0, r:10},
+        {l:'Oui, une mobilité courte serait envisageable', d:'Une alternative court terme peut préserver une expérience internationale.', p:4, r:5},
+        {l:'Oui, une destination proche permettrait des allers-retours', d:'La contrainte est gérable avec la bonne destination.', p:6, r:4},
+      ]
+    }]}]
   },
-
   {
-    id:'autonomie',
-    bloc:'⚡ Autonomie',
+    id:'autonomie',bloc:'Autonomie',
     title:'Quel est ton niveau réel d\'autonomie au quotidien aujourd\'hui ?',
-    subtitle:'Pas l\'autonomie souhaitée — celle que tu exerces vraiment : gestion administrative, budget, logement, organisation.',
+    subtitle:'Pas l\'autonomie souhaitée — celle que tu exerces vraiment.',
     context:'42% des retours anticipés en mobilité Erasmus sont liés à des difficultés d\'autonomie. Source : ERASMUS+ National Agency France 2023.',
-    weight:2, dim:'autonomie',
+    weight:2,dim:'autonomie',
     options:[
       {l:'Faible — je dépends encore beaucoup de ma famille', d:'La plupart des démarches sont gérées pour moi.', p:2, r:8},
       {l:'Partielle — je me débrouille pour les choses simples', d:'Les démarches complexes me dépassent encore.', p:5, r:5},
@@ -743,202 +1034,160 @@ const BASE_QUESTIONS = [
       {l:'Excellente — j\'ai déjà géré des imprévus en autonomie', d:'Colocation, jobs étudiants, démarches admin : tout ça, c\'est acquis.', p:10, r:1},
     ]
   },
-
   {
-    id:'resilience',
-    bloc:'⚡ Autonomie',
+    id:'resilience',bloc:'Autonomie',
     title:'Comment traverses-tu une période difficile prolongée (3 à 6 semaines dures) ?',
-    subtitle:'Les premières semaines à l\'étranger sont statistiquement les plus difficiles. Comment fonctionnes-tu dans ces moments ?',
-    weight:2, dim:'autonomie',
+    subtitle:'Les premières semaines à l\'étranger sont statistiquement les plus difficiles.',
+    weight:2,dim:'autonomie',
     options:[
-      {l:'Je décroche — j\'ai besoin de mon environnement habituel', d:'Sans mes repères habituels, je perds confiance et motivation rapidement.', p:1, r:9},
-      {l:'C\'est dur mais je tiens avec du soutien régulier', d:'J\'ai besoin d\'un filet émotionnel fort (famille, amis proches).', p:5, r:5},
+      {l:'Je décroche — j\'ai besoin de mon environnement habituel', d:'Sans mes repères habituels, je perds confiance rapidement.', p:1, r:9},
+      {l:'C\'est dur mais je tiens avec du soutien régulier', d:'J\'ai besoin d\'un filet émotionnel fort pour traverser les mauvaises passes.', p:5, r:5},
       {l:'Je traverse, ça forge', d:'Les périodes dures me motivent à trouver des solutions.', p:8, r:2},
       {l:'Je suis à l\'aise dans l\'adversité', d:'Les défis ne me découragent pas — ils m\'engagent davantage.', p:10, r:1},
     ]
   },
-
-  // ── MOTIVATION ──
   {
-    id:'motivation',
-    bloc:'🔍 Motivation réelle',
+    id:'motivation',bloc:'Motivation réelle',
     title:'Quelle est ta vraie raison principale d\'envisager une mobilité internationale ?',
-    subtitle:'Sois honnête. La réponse n\'est pas notée moralement — elle calibre l\'analyse.',
-    weight:2.5, dim:'motivation',
+    subtitle:'Sois honnête avec toi-même. La réponse calibre l\'analyse.',
+    weight:2.5,dim:'motivation',
     options:[
-      {l:'Découverte personnelle / aventure', d:'Je veux sortir de ma zone de confort et vivre autre chose.', p:6, r:4},
-      {l:'Construction d\'un projet professionnel précis', d:'Ce séjour s\'inscrit dans une stratégie claire : secteur, réseau, poste.', p:10, r:1},
-      {l:'Pression sociale ou attentes extérieures', d:'Mon entourage ou la norme de ma promo m\'y pousse. Je ne suis pas certain que c\'est pour moi.', p:3, r:7},
-      {l:'Développer des compétences interculturelles concrètes', d:'Je vois ça comme un investissement dans des compétences rares et valorisables.', p:9, r:2},
+      {l:'Découverte personnelle et aventure', d:'Je veux sortir de ma zone de confort et vivre autre chose.', p:6, r:4},
+      {l:'Construction d\'un projet professionnel précis', d:'Ce séjour s\'inscrit dans une stratégie claire.', p:10, r:1},
+      {l:'Pression sociale ou attentes extérieures', d:'Mon entourage m\'y pousse. Je ne suis pas certain que c\'est pour moi.', p:3, r:7},
+      {l:'Développer des compétences interculturelles concrètes', d:'Un investissement dans des compétences rares et valorisables.', p:9, r:2},
       {l:'Fuir une situation inconfortable en France', d:'Je cherche à prendre de la distance avec quelque chose de difficile.', p:3, r:7},
     ]
   },
-
   {
-    id:'destination',
-    bloc:'🔍 Motivation réelle',
+    id:'destination',bloc:'Motivation réelle',
     title:'As-tu déjà réfléchi à une destination ou une université partenaire spécifique ?',
     subtitle:'Un projet concret — même incomplet — est un indicateur fort de motivation réelle.',
-    weight:1.5, dim:'motivation',
+    weight:1.5,dim:'motivation',
     options:[
       {l:'Non, je n\'y ai pas du tout réfléchi', d:'L\'idée est présente mais aucune démarche concrète n\'a commencé.', p:2, r:7},
       {l:'J\'ai vaguement regardé les offres Erasmus de mon IUT', d:'Une idée générale sans direction précise.', p:5, r:5},
       {l:'Oui, j\'ai une ou deux destinations en tête', d:'J\'ai déjà comparé des universités ou des villes.', p:8, r:2},
-      {l:'Oui, j\'ai un projet précis avec université et plan de financement', d:'J\'ai fait les démarches de renseignement et une vision claire de comment ça se passerait.', p:10, r:1},
+      {l:'Oui, j\'ai un projet précis avec université et plan de financement', d:'J\'ai fait les démarches de renseignement et j\'ai une vision claire.', p:10, r:1},
     ],
     followUp:[
-      {ifValue:2, questions:[
-        {
-          id:'destination_detail',
-          bloc:'🔍 Motivation réelle',
-          title:'Ces destinations correspondent-elles à un vrai intérêt professionnel ou plutôt à une attirance personnelle ?',
-          subtitle:'Les deux sont valides — mais l\'objectif de l\'analyse est de comprendre ce qui motive le choix.',
-          weight:1, dim:'motivation',
-          options:[
-            {l:'Surtout un intérêt personnel (ville, culture, amis sur place)', d:'La motivation est réelle mais moins stratégique sur le plan professionnel.', p:6, r:4},
-            {l:'Un mix des deux — je veux y aller ET c\'est pertinent pour mon projet', d:'Les deux motivations sont alignées : c\'est le meilleur scénario.', p:9, r:2},
-            {l:'Surtout stratégique — ces destinations correspondent à des partenaires intéressants', d:'La démarche est très professionnelle.', p:10, r:1},
-          ]
-        }
-      ]},
-      {ifValue:3, questions:[
-        {
-          id:'destination_precis_prêt',
-          bloc:'🔍 Motivation réelle',
-          title:'As-tu déjà pris contact avec le bureau des relations internationales de ton IUT ?',
-          subtitle:'C\'est l\'indicateur le plus concret de passage à l\'action.',
-          weight:1, dim:'motivation',
-          options:[
-            {l:'Non, pas encore', d:'Le projet est avancé mais la démarche officielle n\'a pas commencé.', p:7, r:3},
-            {l:'Oui, j\'ai eu un premier contact', d:'La démarche est bien engagée.', p:9, r:1},
-            {l:'Oui, je suis en cours de candidature', d:'Tu es déjà dans le processus — c\'est le signal le plus fort.', p:10, r:1},
-          ]
-        }
-      ]}
+      {ifValue:2,questions:[{
+        id:'dest_interet',bloc:'Motivation réelle',
+        title:'Ces destinations correspondent-elles à un intérêt professionnel ou plutôt personnel ?',
+        subtitle:'Les deux sont valides — mais l\'analyse doit le savoir pour être précise.',
+        weight:1,dim:'motivation',
+        options:[
+          {l:'Surtout personnel (ville, culture, amis sur place)', d:'La motivation est réelle mais moins stratégique professionnellement.', p:6, r:4},
+          {l:'Un mix des deux — je veux y aller ET c\'est pertinent pour mon projet', d:'Les deux motivations sont alignées : c\'est le meilleur scénario.', p:9, r:2},
+          {l:'Surtout stratégique — ces destinations correspondent à des partenaires intéressants', d:'La démarche est très professionnelle.', p:10, r:1},
+        ]
+      }]},
+      {ifValue:3,questions:[{
+        id:'dest_contact',bloc:'Motivation réelle',
+        title:'As-tu déjà pris contact avec le bureau des relations internationales de l\'IUT de Vienne ?',
+        subtitle:'C\'est l\'indicateur le plus concret de passage à l\'action.',
+        weight:1,dim:'motivation',
+        options:[
+          {l:'Non, pas encore', d:'Le projet est avancé mais la démarche officielle n\'a pas commencé.', p:7, r:3},
+          {l:'Oui, j\'ai eu un premier contact', d:'La démarche est bien engagée.', p:9, r:1},
+          {l:'Oui, je suis en cours de candidature', d:'Tu es déjà dans le processus — c\'est le signal le plus fort.', p:10, r:1},
+        ]
+      }]}
     ]
   },
-
-  // ── ANCRAGE ──
   {
-    id:'reseau',
-    bloc:'🤝 Ancrage en France',
+    id:'reseau',bloc:'Ancrage en France',
     title:'Ton réseau professionnel en France représente-t-il une opportunité concrète que tu perdrais en partant ?',
-    subtitle:'Contacts de stage, patron qui te suit, famille entrepreneuriale, poste déjà envisagé...',
-    weight:1.5, dim:'ancrage',
+    subtitle:'Contacts de stage, patron qui te suit, famille entrepreneuriale...',
+    weight:1.5,dim:'ancrage',
     options:[
       {l:'Non, je n\'ai pas encore de réseau particulier', d:'Je pars de zéro dans les deux cas — partir n\'entraîne aucune perte.', p:8, r:3},
       {l:'Quelques contacts, mais rien de décisif', d:'Rien qui justifie de rester pour ça.', p:7, r:4},
-      {l:'Un réseau solide et des opportunités concrètes identifiées', d:'Des stages, des entreprises qui me connaissent, des retours positifs.', p:4, r:7},
+      {l:'Un réseau solide et des opportunités concrètes identifiées', d:'Des stages, des entreprises qui me connaissent.', p:4, r:7},
       {l:'Une opportunité forte que je risque vraiment de perdre', d:'CDI envisagé, stage rare, famille entrepreneuriale. Partir = risque réel.', p:2, r:9},
     ]
   },
-
-  // ── EXPÉRIENCE & VISION ──
   {
-    id:'experience',
-    bloc:'✈️ Expérience de l\'étranger',
+    id:'experience',bloc:'Expérience de l\'étranger',
     title:'Quelle est ton expérience réelle de l\'étranger en autonomie ?',
-    subtitle:'Pas les vacances en famille — des situations où tu as dû te débrouiller seul dans un environnement étranger.',
-    weight:1.5, dim:'maturite',
+    subtitle:'Pas les vacances en famille — des situations où tu as dû te débrouiller seul.',
+    weight:1.5,dim:'maturite',
     options:[
       {l:'Aucune expérience significative', d:'Je n\'ai jamais été seul dans un pays étranger en autonomie.', p:3, r:7},
       {l:'Quelques voyages courts en groupe ou avec la famille', d:'J\'ai voyagé mais toujours avec un filet de sécurité.', p:5, r:5},
       {l:'Un séjour linguistique ou voyage autonome', d:'J\'ai déjà géré une courte période à l\'étranger de façon indépendante.', p:8, r:3},
-      {l:'Une expérience longue (stage, volontariat, vie à l\'étranger)', d:'J\'ai déjà vécu plusieurs semaines ou mois à l\'étranger en gérant mon quotidien.', p:10, r:1},
+      {l:'Une expérience longue (stage, volontariat, vie à l\'étranger)', d:'J\'ai déjà vécu plusieurs semaines ou mois à l\'étranger.', p:10, r:1},
     ]
   },
-
   {
-    id:'vision',
-    bloc:'🔭 Vision à long terme',
+    id:'vision',bloc:'Vision à long terme',
     title:'Dans 5 ans, quelle version de toi-même tu préfères avoir construite ?',
     subtitle:'Question de fond. Il n\'y a pas de bonne réponse — il y a la tienne.',
-    weight:2, dim:'vision',
+    weight:2,dim:'vision',
     options:[
-      {l:'Bien intégré dans un environnement local que je maîtrise', d:'Stabilité, réseau local solide, expertise dans mon secteur en France.', p:2, r:9},
-      {l:'Polyvalent, avec des expériences variées', d:'Pas forcément à l\'étranger, mais un profil riche et diversifié.', p:6, r:5},
+      {l:'Bien intégré dans un environnement local que je maîtrise', d:'Stabilité, réseau local solide, expertise en France.', p:2, r:9},
+      {l:'Polyvalent, avec des expériences variées', d:'Pas forcément à l\'étranger, mais un profil riche.', p:6, r:5},
       {l:'Capable de travailler dans plusieurs pays et cultures', d:'Je veux avoir prouvé que je peux m\'adapter partout.', p:9, r:2},
       {l:'En train de construire quelque chose à l\'international', d:'Je me vois travailler ou entreprendre hors de France dans les 5 ans.', p:10, r:1},
     ]
   },
-
 ];
 
 const FAQ_DATA = [
-  {q:"Quel niveau de langue faut-il vraiment pour partir ?", a:"Le niveau B1 est considéré comme le seuil minimal viable pour une mobilité dans un pays anglophone. En pratique, c'est pouvoir comprendre un cours magistral, négocier avec un propriétaire et se faire comprendre dans une administration. Le niveau progresse très rapidement : +1 niveau CECRL en 3 à 4 mois d'immersion en moyenne. 67% des étudiants déclarent avoir sous-estimé leurs difficultés les 3 premières semaines, mais 89% affirment avoir progressé significativement en 6 mois."},
-  {q:"Combien coûte vraiment un semestre à l'étranger ?", a:"Le surcoût mensuel varie selon la destination : +50 à 150€/mois en Espagne ou Portugal, +200 à 350€/mois à Dublin ou Amsterdam. La bourse Erasmus+ couvre 310 à 800€/mois selon le pays d'accueil. Des aides régionales et de l'IUT s'ajoutent souvent. Beaucoup d'étudiants finissent par dépenser à peine plus qu'en France une fois toutes les aides cumulées. Source : Campus France 2024-2025."},
-  {q:"Mes notes à l'étranger sont-elles reconnues ?", a:"Oui, via le système ECTS. Un learning agreement est signé avant le départ entre toi, ton IUT et l'université d'accueil. Ce document liste les équivalences cours par cours. Ton IUT reste ton établissement d'inscription — tu passes en 3ème année BUT GEA, simplement dans un autre pays."},
-  {q:"Que se passe-t-il si ça se passe très mal ?", a:"Un retour anticipé est toujours possible. Ton IUT reste ton établissement de référence et le bureau des relations internationales peut t'accompagner. Certaines assurances étudiantes couvrent les frais de retour pour raisons médicales. Il faut distinguer les difficultés normales des premières semaines (qui s'atténuent dans 80% des cas) des situations vraiment incompatibles avec la poursuite du séjour."},
-  {q:"Ce test donne-t-il la bonne réponse ?", a:"Non — et c'est volontaire. Ce test t'aide à structurer ta réflexion à partir de critères objectifs, mais la décision finale t'appartient. Il est conçu pour être aussi honnête qu'un conseiller le serait : pas pour te vendre un voyage, mais pour analyser ta situation réelle. Certains profils doivent entendre un 'non' clair — et c'est ce que tu obtiendras si c'est le cas."},
+  {q:"Quel niveau de langue faut-il vraiment pour partir ?",a:"Le niveau B1 est considéré comme le seuil minimal viable. En pratique, c'est pouvoir comprendre un cours magistral, négocier avec un propriétaire et se faire comprendre dans une administration. Le niveau progresse très rapidement : +1 niveau CECRL en 3 à 4 mois d'immersion en moyenne. 67% des étudiants déclarent avoir sous-estimé leurs difficultés les 3 premières semaines, mais 89% affirment avoir progressé significativement en 6 mois."},
+  {q:"Combien coûte vraiment un semestre à l'étranger ?",a:"Le surcoût mensuel varie selon la destination : +50 à 150€/mois en Espagne ou Portugal, +200 à 350€/mois à Dublin ou Amsterdam, beaucoup moins dans les pays d'Europe de l'Est. La bourse Erasmus+ couvre 310 à 800€/mois selon le pays. Des aides régionales et de l'IUT s'ajoutent souvent. Source : Campus France 2024-2025."},
+  {q:"Les partenaires listés sont-ils les vrais partenaires de l'IUT de Vienne ?",a:"Les établissements présentés dans cet outil sont des partenaires Erasmus+ typiques pour un IUT GEA en France dans chacun des pays partenaires. Pour les partenaires exacts de l'IUT de Vienne, consulte le bureau des relations internationales ou le site officiel de l'IUT."},
+  {q:"Mes notes à l'étranger sont-elles reconnues ?",a:"Oui, via le système ECTS. Un learning agreement est signé avant le départ entre toi, ton IUT et l'université d'accueil. Ce document liste les équivalences cours par cours. Ton IUT de Vienne reste ton établissement d'inscription — tu passes en 3ème année BUT GEA, simplement dans un autre pays."},
+  {q:"Ce test donne-t-il la bonne réponse ?",a:"Non — et c'est volontaire. Ce test t'aide à structurer ta réflexion à partir de critères objectifs, mais la décision finale t'appartient. Il est conçu pour être aussi honnête qu'un conseiller le serait : pas pour te vendre un voyage, mais pour analyser ta situation réelle."},
 ];
 
-// ════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 // STATE
-// ════════════════════════════════════════════
-let questionFlow = [];   // liste ordonnée des questions à poser (adaptative)
-let currentIdx = 0;
-const answers = {};      // {questionId: optionIndex}
-let lastResults = null;  // stocker pour PDF
+// ═══════════════════════════════════════════════════
+let questionFlow=[],currentIdx=0;
+const answers={};
+let lastResults=null;
+let destAnswers={};
+let destQIdx=0;
 
-function buildFlow() {
-  questionFlow = JSON.parse(JSON.stringify(BASE_QUESTIONS));
-}
+function buildFlow(){questionFlow=JSON.parse(JSON.stringify(BASE_QUESTIONS));}
 
-// ════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 // NAVIGATION
-// ════════════════════════════════════════════
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const el = document.getElementById(id);
-  el.classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
+// ═══════════════════════════════════════════════════
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-
-function goHome() { showPage('page-home'); }
-function goToResults() { showPage('page-results'); }
-
-function goSection(id) {
+function goHome(){showPage('page-home');}
+function goToResults(){showPage('page-results');}
+function goSection(id){
   showPage('page-home');
-  setTimeout(() => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
-  }, 120);
+  setTimeout(()=>{const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},120);
 }
-
-function startTest() {
-  currentIdx = 0;
-  Object.keys(answers).forEach(k => delete answers[k]);
-  buildFlow();
-  showPage('page-test');
-  renderQuestion();
+function startTest(){
+  currentIdx=0;Object.keys(answers).forEach(k=>delete answers[k]);buildFlow();
+  showPage('page-test');renderQuestion();
 }
+function restartTest(){startTest();}
 
-function restartTest() { startTest(); }
-
-// ════════════════════════════════════════════
-// RENDU
-// ════════════════════════════════════════════
-function renderQuestion() {
-  const q = questionFlow[currentIdx];
-  if (!q) { launchLoading(); return; }
-
-  const body = document.getElementById('test-body');
-  const saved = answers[q.id];
-  const ctxHTML = q.context ? `<div class="q-context"><strong>Contexte :</strong> ${q.context}</div>` : '';
-
-  const optsHTML = q.options.map((opt, i) => `
-    <button class="opt ${saved === i ? 'selected' : ''}" onclick="selectOpt(${i})">
+// ═══════════════════════════════════════════════════
+// TEST RENDU
+// ═══════════════════════════════════════════════════
+function renderQuestion(){
+  const q=questionFlow[currentIdx];if(!q){launchLoading();return;}
+  const body=document.getElementById('test-body');
+  const saved=answers[q.id];
+  const ctxHTML=q.context?`<div class="q-context"><strong>Contexte :</strong> ${q.context}</div>`:'';
+  const optsHTML=q.options.map((opt,i)=>`
+    <button class="opt ${saved===i?'selected':''}" onclick="selectOpt(${i})">
       <div class="opt-radio"></div>
-      <div>
-        <div class="opt-label">${opt.l}</div>
-        <div class="opt-desc">${opt.d}</div>
-      </div>
+      <div><div class="opt-label">${opt.l}</div><div class="opt-desc">${opt.d}</div></div>
     </button>`).join('');
-
-  const isLast = currentIdx === questionFlow.length - 1;
-  const hasPrev = currentIdx > 0;
-
-  body.innerHTML = `
+  const isLast=currentIdx===questionFlow.length-1;
+  const hasPrev=currentIdx>0;
+  body.innerHTML=`
     <div class="q-card active">
       <div class="q-bloc">${q.bloc}</div>
       <div class="q-title">${q.title}</div>
@@ -946,578 +1195,379 @@ function renderQuestion() {
       ${ctxHTML}
       <div class="options">${optsHTML}</div>
       <div class="q-nav">
-        <button class="btn-prev" onclick="prevQ()" style="${hasPrev ? '' : 'visibility:hidden'}">← Précédent</button>
-        <button class="btn-next" id="btn-next" onclick="nextQ()" ${saved !== undefined ? '' : 'disabled'}>
-          ${isLast ? 'Voir mon résultat →' : 'Suivant →'}
+        <button class="btn-prev" onclick="prevQ()" style="${hasPrev?'':'visibility:hidden'}">← Précédent</button>
+        <button class="btn-next" id="btn-next" onclick="nextQ()" ${saved!==undefined?'':'disabled'}>
+          ${isLast?'Voir mon résultat →':'Suivant →'}
         </button>
       </div>
     </div>`;
 }
 
-function selectOpt(idx) {
-  const q = questionFlow[currentIdx];
-  const prevAnswer = answers[q.id];
-  answers[q.id] = idx;
-
-  // Injecter des follow-up questions si nécessaire
-  if (q.followUp) {
-    const match = q.followUp.find(f => f.ifValue === idx);
-    const prevMatch = prevAnswer !== undefined && q.followUp.find(f => f.ifValue === prevAnswer);
-
-    // Retirer les follow-up de l'ancienne réponse
-    if (prevMatch && prevAnswer !== idx) {
-      const removeIds = prevMatch.questions.map(fq => fq.id);
-      questionFlow = questionFlow.filter((fq, i) => !(i > currentIdx && removeIds.includes(fq.id)));
+function selectOpt(idx){
+  const q=questionFlow[currentIdx];const prev=answers[q.id];answers[q.id]=idx;
+  if(q.followUp){
+    const match=q.followUp.find(f=>f.ifValue===idx);
+    const prevMatch=prev!==undefined&&q.followUp.find(f=>f.ifValue===prev);
+    if(prevMatch&&prev!==idx){
+      const removeIds=prevMatch.questions.map(fq=>fq.id);
+      questionFlow=questionFlow.filter((fq,i)=>!(i>currentIdx&&removeIds.includes(fq.id)));
     }
-
-    // Ajouter les follow-up de la nouvelle réponse (si pas déjà présents)
-    if (match) {
-      const alreadyAdded = questionFlow.some(fq => fq.id === match.questions[0].id);
-      if (!alreadyAdded) {
-        questionFlow.splice(currentIdx + 1, 0, ...match.questions);
-      }
+    if(match&&!questionFlow.some(fq=>fq.id===match.questions[0].id)){
+      questionFlow.splice(currentIdx+1,0,...match.questions);
     }
   }
-
-  document.querySelectorAll('.opt').forEach((el, i) => el.classList.toggle('selected', i === idx));
-  document.getElementById('btn-next').disabled = false;
-
-  // Mettre à jour le bouton si c'est maintenant la dernière question
-  const isNowLast = currentIdx === questionFlow.length - 1;
-  document.getElementById('btn-next').textContent = isNowLast ? 'Voir mon résultat →' : 'Suivant →';
+  document.querySelectorAll('.opt').forEach((el,i)=>el.classList.toggle('selected',i===idx));
+  const btn=document.getElementById('btn-next');btn.disabled=false;
+  btn.textContent=currentIdx===questionFlow.length-1?'Voir mon résultat →':'Suivant →';
 }
+function nextQ(){if(answers[questionFlow[currentIdx].id]===undefined)return;if(currentIdx<questionFlow.length-1){currentIdx++;renderQuestion();}else launchLoading();}
+function prevQ(){if(currentIdx>0){currentIdx--;renderQuestion();}}
 
-function nextQ() {
-  if (answers[questionFlow[currentIdx].id] === undefined) return;
-  if (currentIdx < questionFlow.length - 1) {
-    currentIdx++;
-    renderQuestion();
-  } else {
-    launchLoading();
-  }
-}
-
-function prevQ() {
-  if (currentIdx > 0) { currentIdx--; renderQuestion(); }
-}
-
-// ════════════════════════════════════════════
-// LOADING (~4 secondes)
-// ════════════════════════════════════════════
-function launchLoading() {
+// ═══════════════════════════════════════════════════
+// LOADING
+// ═══════════════════════════════════════════════════
+function launchLoading(){
   showPage('page-loading');
-  const steps = document.querySelectorAll('.ls');
-  const bar = document.getElementById('load-bar');
-  const delays = [700, 1500, 2200, 2900, 3500];
-  delays.forEach((d, i) => setTimeout(() => {
-    if (i > 0) { steps[i-1].className = 'ls done'; }
-    if (i < steps.length) { steps[i].className = 'ls active'; }
-    bar.style.width = Math.round((i+1)/steps.length*100) + '%';
-  }, d));
-  setTimeout(() => {
-    steps.forEach(s => s.className = 'ls done');
-    bar.style.width = '100%';
-    setTimeout(() => computeAndShow(), 400);
-  }, 4100);
+  const steps=document.querySelectorAll('.ls');const bar=document.getElementById('load-bar');
+  const delays=[700,1500,2200,2900,3500];
+  delays.forEach((d,i)=>setTimeout(()=>{
+    if(i>0)steps[i-1].className='ls done';
+    if(i<steps.length)steps[i].className='ls active';
+    bar.style.width=Math.round((i+1)/steps.length*100)+'%';
+  },d));
+  setTimeout(()=>{steps.forEach(s=>s.className='ls done');bar.style.width='100%';setTimeout(()=>computeAndShow(),400);},4200);
 }
 
-// ════════════════════════════════════════════
-// CALCUL
-// ════════════════════════════════════════════
-function computeScores() {
-  let rawP = 0, rawR = 0;
-  const byDim = {};
-  const detail = [];
-
-  questionFlow.forEach(q => {
-    const idx = answers[q.id];
-    if (idx === undefined) return;
-    const opt = q.options[idx];
-    const wP = opt.p * q.weight;
-    const wR = opt.r * q.weight;
-    rawP += wP; rawR += wR;
-    if (!byDim[q.dim]) byDim[q.dim] = {p:0, r:0, label:q.bloc};
-    byDim[q.dim].p += wP;
-    byDim[q.dim].r += wR;
-    detail.push({name: q.bloc.replace(/[^\w\s]/g,'').trim(), net: wP - wR, q: q.title.substring(0,45)+'…', a: opt.l});
+// ═══════════════════════════════════════════════════
+// CALCUL SCORES
+// ═══════════════════════════════════════════════════
+function computeScores(){
+  let rawP=0,rawR=0;const byDim={};const detail=[];
+  questionFlow.forEach(q=>{
+    const idx=answers[q.id];if(idx===undefined)return;
+    const opt=q.options[idx];const wP=opt.p*q.weight,wR=opt.r*q.weight;
+    rawP+=wP;rawR+=wR;
+    if(!byDim[q.dim])byDim[q.dim]={p:0,r:0,label:q.bloc};
+    byDim[q.dim].p+=wP;byDim[q.dim].r+=wR;
+    detail.push({name:q.bloc,net:wP-wR,q:q.title.substring(0,50)+'…',a:opt.l});
   });
-
-  const tot = rawP + rawR || 1;
-  const pPct = Math.round(rawP / tot * 100);
-  return { pPct, rPct: 100 - pPct, byDim, detail };
+  const tot=rawP+rawR||1;const pPct=Math.round(rawP/tot*100);
+  return{pPct,rPct:100-pPct,byDim,detail};
 }
 
-// ════════════════════════════════════════════
-// AFFICHAGE RÉSULTATS
-// ════════════════════════════════════════════
-function computeAndShow() {
-  const { pPct, rPct, byDim, detail } = computeScores();
-  lastResults = { pPct, rPct, byDim, detail };
-  showPage('page-results');
-
-  document.getElementById('num-p').textContent = pPct + '%';
-  document.getElementById('num-r').textContent = rPct + '%';
-
-  const diff = pPct - rPct;
-  const cp = document.getElementById('card-p');
-  const cr = document.getElementById('card-r');
-  const bp = document.getElementById('badge-p');
-  const br = document.getElementById('badge-r');
-  cp.className = 'score-card';
-  cr.className = 'score-card';
-  bp.innerHTML = '';
-  br.innerHTML = '';
-
-  // Identifier les vraies forces et faiblesses par dimension
-  const dimAtouts = [], dimFreins = [];
-  Object.entries(byDim).forEach(([dim, data]) => {
-    const tot2 = data.p + data.r || 1;
-    const dimPct = Math.round(data.p / tot2 * 100);
-    const label = data.label.replace(/[^\w\s]/g,'').trim();
-    if (dimPct >= 60) dimAtouts.push({dim, label, pct:dimPct});
-    else dimFreins.push({dim, label, pct:dimPct});
+// ═══════════════════════════════════════════════════
+// RÉSULTATS
+// ═══════════════════════════════════════════════════
+function computeAndShow(){
+  const{pPct,rPct,byDim,detail}=computeScores();
+  lastResults={pPct,rPct,byDim,detail};showPage('page-results');
+  document.getElementById('num-p').textContent=pPct+'%';
+  document.getElementById('num-r').textContent=rPct+'%';
+  const diff=pPct-rPct;
+  const cp=document.getElementById('card-p'),cr=document.getElementById('card-r');
+  const bp=document.getElementById('badge-p'),br=document.getElementById('badge-r');
+  cp.className='score-card';cr.className='score-card';bp.innerHTML='';br.innerHTML='';
+  const dimAtouts=[],dimFreins=[];
+  Object.entries(byDim).forEach(([dim,data])=>{
+    const tot=data.p+data.r||1;const pct=Math.round(data.p/tot*100);
+    if(pct>=60)dimAtouts.push({dim,label:data.label,pct});
+    else dimFreins.push({dim,label:data.label,pct});
   });
+  const reasons=buildReasons(byDim,diff);
+  let icon,title,p1;
+  if(diff>=35){cp.className='score-card winner';bp.innerHTML='<div class="winner-tag">✓ Fortement recommandé</div>';cr.className='score-card loser';icon='✈️';title='Tous les indicateurs clés sont favorables à une mobilité internationale.';p1='Voici les raisons concrètes qui justifient cette recommandation :';}
+  else if(diff>=15){cp.className='score-card winner';bp.innerHTML='<div class="winner-tag">✓ Recommandé</div>';cr.className='score-card loser';icon='🚀';title='Ton profil est globalement favorable, avec des points d\'attention précis.';p1='Ce qui oriente la recommandation dans les deux sens :';}
+  else if(diff>=0){icon='⚖️';title='Profil partagé — la décision dépend de ce que tu prioritises.';p1='Voici ce qui équilibre ton profil dans les deux directions :';}
+  else if(diff>=-15){cr.className='score-card winner';br.innerHTML='<div class="winner-tag" style="background:var(--amber);color:#1A1200">↩ Plutôt rester</div>';cp.className='score-card loser';icon='🏠';title='Ton profil actuel présente des freins concrets qui rendent la mobilité risquée.';p1='Les raisons précises qui expliquent cette recommandation :';}
+  else{cr.className='score-card winner';br.innerHTML='<div class="winner-tag" style="background:var(--red);color:white">↩ Fortement déconseillé</div>';cp.className='score-card loser';icon='⚠️';title='Partir maintenant dans ces conditions représente une prise de risque excessive.';p1='Les freins identifiés sont trop importants pour une mobilité sereine :';}
+  document.getElementById('r-emoji').textContent=icon;document.getElementById('r-title').textContent=title;
+  document.getElementById('r-sub').textContent=buildSubtitle(diff);
+  document.getElementById('v-icon').textContent=icon;document.getElementById('v-title').textContent=title;document.getElementById('v-p1').textContent=p1;
+  document.getElementById('v-reasons').innerHTML=reasons.map(r=>`<div class="reason-item"><span class="reason-icon">${r.icon}</span><span>${r.text}</span></div>`).join('');
+  const grid=document.getElementById('analysis-grid');grid.innerHTML='';
+  if(dimAtouts.length){const c=document.createElement('div');c.className='analysis-card';c.innerHTML='<h4>Atouts identifiés</h4>'+dimAtouts.map(a=>`<div class="factor-row"><span class="factor-icon">→</span><span class="factor-label">${a.label}</span><span class="factor-badge fb-sage">${a.pct}% mobilité</span></div>`).join('');grid.appendChild(c);}
+  if(dimFreins.length){const c=document.createElement('div');c.className='analysis-card';c.innerHTML='<h4>Points de vigilance</h4>'+dimFreins.map(f=>`<div class="factor-row"><span class="factor-icon">→</span><span class="factor-label">${f.label}</span><span class="factor-badge fb-amber">${f.pct}% mobilité</span></div>`).join('');grid.appendChild(c);}
+  const bdr=document.getElementById('bd-rows');bdr.innerHTML='';
+  const mx=Math.max(...detail.map(d=>Math.abs(d.net)))||1;
+  detail.forEach(d=>{const pct=Math.round(Math.abs(d.net)/mx*100);const row=document.createElement('div');row.className='bd-row';row.innerHTML=`<span class="bd-label">${d.name}</span><div class="bd-track"><div class="bd-fill ${d.net>=0?'bd-pos':'bd-neg'}" style="width:${pct}%"></div></div><span class="bd-pct" style="color:${d.net>=0?'var(--sage)':'var(--amber)'}">${d.net>=0?'+':''}${d.net.toFixed(1)}</span>`;bdr.appendChild(row);});
+  callAI(pPct,rPct,diff,byDim);loadComm();recordScore(pPct,rPct);
+}
 
-  // Construire les raisons précises
-  const reasons = buildReasons(byDim, diff);
+function buildSubtitle(diff){
+  if(diff>=35)return'La convergence de tes réponses sur les dimensions clés est rare — elle oriente clairement vers une mobilité.';
+  if(diff>=15)return'Le bilan est positif mais certaines dimensions nécessitent une préparation sérieuse avant le départ.';
+  if(diff>=0)return'Tes réponses s\'équilibrent — le choix final dépend de ce que tu priorises.';
+  if(diff>=-15)return'Certains freins objectifs rendent une mobilité longue risquée dans ta situation actuelle.';
+  return'Les freins sont trop nombreux et importants pour envisager une mobilité sereine aujourd\'hui.';
+}
 
-  let icon, title, p1;
-
-  if (diff >= 35) {
-    cp.className = 'score-card winner';
-    bp.innerHTML = '<div class="winner-tag">✓ Fortement recommandé</div>';
-    cr.className = 'score-card loser';
-    icon = '✈️';
-    title = 'Tous les indicateurs clés sont favorables à une mobilité internationale.';
-    p1 = 'Voici les raisons concrètes qui justifient cette recommandation :';
-  } else if (diff >= 15) {
-    cp.className = 'score-card winner';
-    bp.innerHTML = '<div class="winner-tag">✓ Recommandé</div>';
-    cr.className = 'score-card loser';
-    icon = '🚀';
-    title = 'Ton profil est globalement favorable, avec des points d\'attention précis.';
-    p1 = 'Ce qui oriente cette recommandation dans les deux sens :';
-  } else if (diff >= 0) {
-    icon = '⚖️';
-    title = 'Profil partagé — la décision dépend de ce que tu prioritises.';
-    p1 = 'Voici ce qui équilibre ton profil dans les deux directions :';
-  } else if (diff >= -15) {
-    cr.className = 'score-card winner';
-    br.innerHTML = '<div class="winner-tag" style="background:var(--orange)">↩ Plutôt rester</div>';
-    cp.className = 'score-card loser';
-    icon = '🏠';
-    title = 'Ton profil actuel présente des freins concrets qui rendent la mobilité risquée.';
-    p1 = 'Les raisons précises qui expliquent cette recommandation :';
-  } else {
-    cr.className = 'score-card winner';
-    br.innerHTML = '<div class="winner-tag" style="background:var(--orange)">↩ Fortement déconseillé</div>';
-    cp.className = 'score-card loser';
-    icon = '⚠️';
-    title = 'Partir maintenant dans ces conditions représente une prise de risque excessive.';
-    p1 = 'Les freins identifiés sont trop importants pour une mobilité sereine :';
-  }
-
-  document.getElementById('r-emoji').textContent = icon;
-  document.getElementById('r-title').textContent = title;
-  document.getElementById('r-sub').textContent = buildSubtitle(diff);
-  document.getElementById('v-icon').textContent = icon;
-  document.getElementById('v-title').textContent = title;
-  document.getElementById('v-p1').textContent = p1;
-
-  // Raisons précises
-  const vr = document.getElementById('v-reasons');
-  vr.innerHTML = reasons.map(r => `
-    <div class="reason-item">
-      <span class="reason-icon">${r.icon}</span>
-      <span>${r.text}</span>
-    </div>`).join('');
-
-  // Grille atouts / freins — coordonnée avec le verdict
-  const grid = document.getElementById('analysis-grid');
-  grid.innerHTML = '';
-
-  if (dimAtouts.length) {
-    const card = document.createElement('div');
-    card.className = 'analysis-card';
-    card.innerHTML = '<h4>✅ Atouts identifiés</h4>' +
-      dimAtouts.map(a => `<div class="factor-row"><span class="factor-icon">→</span><span class="factor-label">${a.label}</span><span class="factor-badge fb-green">${a.pct}% mobilité</span></div>`).join('');
-    grid.appendChild(card);
-  }
-
-  if (dimFreins.length) {
-    const card = document.createElement('div');
-    card.className = 'analysis-card';
-    card.innerHTML = '<h4>⚠️ Points de vigilance</h4>' +
-      dimFreins.map(f => `<div class="factor-row"><span class="factor-icon">→</span><span class="factor-label">${f.label}</span><span class="factor-badge fb-orange">${f.pct}% mobilité</span></div>`).join('');
-    grid.appendChild(card);
-  }
-
-  // Breakdown
-  const bdr = document.getElementById('bd-rows');
-  bdr.innerHTML = '';
-  const mx = Math.max(...detail.map(d => Math.abs(d.net))) || 1;
-  detail.forEach(d => {
-    const pct = Math.round(Math.abs(d.net) / mx * 100);
-    const row = document.createElement('div');
-    row.className = 'bd-row';
-    row.innerHTML = `<span class="bd-label">${d.name}</span>
-      <div class="bd-track"><div class="bd-fill ${d.net >= 0 ? 'bd-pos' : 'bd-neg'}" style="width:${pct}%"></div></div>
-      <span class="bd-pct" style="color:${d.net>=0?'var(--blue)':'var(--orange)'}">${d.net>=0?'+':''}${d.net.toFixed(1)}</span>`;
-    bdr.appendChild(row);
+function buildReasons(byDim,diff){
+  const reasons=[];
+  const dimMap={financier:'💶 Finances',linguistique:'🗣️ Langue',projet_pro:'🎯 Projet professionnel',autonomie:'⚡ Autonomie',personnel:'👨‍👩‍👧 Situation personnelle',motivation:'🔍 Motivation',ancrage:'🤝 Ancrage local',maturite:'✈️ Expérience',vision:'🔭 Vision long terme'};
+  Object.entries(byDim).forEach(([dim,data])=>{
+    const tot=data.p+data.r||1;const pct=Math.round(data.p/tot*100);const lbl=dimMap[dim]||dim;
+    if(pct>=65&&diff>=0)reasons.push({icon:lbl.split(' ')[0],text:`Le volet "${lbl.substring(2)}" est un atout fort (${pct}% en faveur de la mobilité) — c'est l'un des moteurs principaux de cette recommandation.`});
+    else if(pct<=40&&diff<15)reasons.push({icon:'⚠️',text:`Le volet "${lbl.substring(2)}" est un frein significatif (${pct}% seulement en faveur de la mobilité) — c'est l'une des raisons concrètes du frein identifié.`});
   });
-
-  callAI(pPct, rPct, diff, byDim);
-  loadComm();
-  recordScore(pPct, rPct);
+  if(reasons.length===0)reasons.push({icon:'📊',text:'Ton profil est équilibré sur la plupart des dimensions — aucune n\'est décisive dans un sens ou dans l\'autre.'});
+  return reasons.slice(0,4);
 }
 
-// ════════════════════════════════════════════
-// CONSTRUCTION DES RAISONS PRÉCISES
-// ════════════════════════════════════════════
-function buildSubtitle(diff) {
-  if (diff >= 35) return 'La convergence de tes réponses sur les dimensions clés est rare — elle oriente clairement vers une mobilité.';
-  if (diff >= 15) return 'Le bilan est positif mais certaines dimensions nécessitent une préparation sérieuse avant le départ.';
-  if (diff >= 0) return 'Tes réponses s\'équilibrent — le choix final dépend de ce que tu priorises dans ta vie.';
-  if (diff >= -15) return 'Certains freins objectifs rendent une mobilité longue risquée dans ta situation actuelle.';
-  return 'Les freins identifiés sont trop nombreux et trop importants pour envisager une mobilité sereine aujourd\'hui.';
+// ═══════════════════════════════════════════════════
+// GUIDE DESTINATIONS
+// ═══════════════════════════════════════════════════
+function startDest(){
+  destAnswers={};destQIdx=0;showPage('page-dest');
+  document.getElementById('dest-quiz').style.display='block';
+  document.getElementById('dest-results').style.display='none';
+  renderDestQuestion();
 }
 
-function buildReasons(byDim, diff) {
-  const reasons = [];
-  const dimMap = {
-    financier: {icon:'💶', label:'finances'},
-    linguistique: {icon:'🗣️', label:'langue'},
-    projet_pro: {icon:'🎯', label:'projet professionnel'},
-    autonomie: {icon:'⚡', label:'autonomie'},
-    personnel: {icon:'👨‍👩‍👧', label:'situation personnelle'},
-    motivation: {icon:'🔍', label:'motivation'},
-    ancrage: {icon:'🤝', label:'ancrage local'},
-    maturite: {icon:'✈️', label:'expérience'},
-    vision: {icon:'🔭', label:'vision long terme'},
-  };
-
-  Object.entries(byDim).forEach(([dim, data]) => {
-    const tot = data.p + data.r || 1;
-    const pct = Math.round(data.p / tot * 100);
-    const info = dimMap[dim] || {icon:'📊', label:dim};
-
-    if (pct >= 65) {
-      if (diff >= 0) reasons.push({icon: info.icon, text: `Ton profil "${info.label}" est un atout fort (${pct}% en faveur de la mobilité) — c'est un des moteurs principaux de cette recommandation.`});
-    } else if (pct <= 40) {
-      if (diff < 15) reasons.push({icon: '⚠️', text: `Le volet "${info.label}" est un frein significatif (${pct}% seulement en faveur de la mobilité) — c'est l'une des raisons concrètes du frein identifié.`});
-    }
-  });
-
-  if (reasons.length === 0) {
-    reasons.push({icon:'📊', text:'Ton profil est équilibré sur la plupart des dimensions — aucune n\'est décisive dans un sens ou dans l\'autre.'});
-  }
-
-  return reasons.slice(0, 4);
-}
-
-// ════════════════════════════════════════════
-// CLAUDE AI
-// ════════════════════════════════════════════
-async function callAI(pPct, rPct, diff, byDim) {
-  const out = document.getElementById('ai-out');
-  const summary = questionFlow
-    .filter(q => answers[q.id] !== undefined)
-    .map(q => `- ${q.title.substring(0,55)} : ${q.options[answers[q.id]].l}`)
-    .join('\n');
-
-  const prompt = `Tu es un conseiller en mobilité internationale spécialisé BUT GEA France 2026. Tu as la rigueur d'un DRH avant une mutation et la bienveillance d'un mentor.
-
-Réponses de l'étudiant :
-${summary}
-
-Score mobilité : ${pPct}% | Score ancrage local : ${rPct}%
-Écart : ${diff > 0 ? '+' : ''}${diff} points en faveur de ${diff >= 0 ? 'partir' : 'rester'}
-
-Donne un conseil en 3 paragraphes courts et précis :
-1. Diagnostic concret de la situation (pas de répétition des scores)
-2. Le point de bascule principal dans son profil
-3. Une action concrète pour les 30 prochains jours
-
-Sois direct, honnête, sans langue de bois. Si les freins sont trop forts, dis-le clairement. Si le profil est favorable, sois précis sur pourquoi. Réponds uniquement en français.`;
-
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({model:'claude-sonnet-4-20250514', max_tokens:1000, messages:[{role:'user', content:prompt}]})
-    });
-    const data = await res.json();
-    const txt = data.content?.map(b => b.text||'').join('')||'';
-    out.innerHTML = txt
-      ? `<p class="ai-body">${txt.replace(/\n\n/g,'</p><p class="ai-body" style="margin-top:.875rem">').replace(/\n/g,'<br>')}</p>`
-      : `<p class="ai-body" style="opacity:.7">Conseil non disponible. Consulte le bureau des relations internationales de ton IUT.</p>`;
-  } catch {
-    out.innerHTML = `<p class="ai-body" style="opacity:.7">Conseil non disponible. Consulte le bureau des relations internationales de ton IUT.</p>`;
-  }
-}
-
-// ════════════════════════════════════════════
-// DONNÉES — VRAIES RÉPONSES UNIQUEMENT
-// ════════════════════════════════════════════
-function getUD() {
-  try { const r = localStorage.getItem('geago_real_v1'); return r ? JSON.parse(r) : {responses:[], scores:[]}; }
-  catch { return {responses:[], scores:[]}; }
-}
-
-function saveUD(d) {
-  try { localStorage.setItem('geago_real_v1', JSON.stringify(d)); } catch {}
-}
-
-function recordScore(p, r) {
-  const d = getUD();
-  d.scores.push({pPct:p, rPct:r, ts:Date.now()});
-  saveUD(d);
-}
-
-function contribute() {
-  const dec = document.getElementById('c-dec').value;
-  if (!dec) { showToast('Merci de sélectionner une décision.'); return; }
-  const {pPct, rPct} = lastResults || computeScores();
-  const d = getUD();
-  // Stockage anonyme : uniquement decision + scores + timestamp
-  d.responses.push({decision:dec, pPct, rPct, ts:Date.now()});
-  saveUD(d);
-  document.getElementById('c-ok').style.display = 'block';
-  showToast('Contribution anonyme enregistrée — merci !');
-  loadComm();
-}
-
-function loadComm() {
-  const ud = getUD();
-  const responses = ud.responses || [];
-  const scores = ud.scores || [];
-
-  // Héro stats
-  if (scores.length > 0) {
-    document.getElementById('h-total').textContent = scores.length;
-    const pp = Math.round(scores.filter(s => s.pPct > 50).length / scores.length * 100);
-    document.getElementById('h-partir').textContent = pp + '%';
-    const sat = responses.filter(r => r.decision.includes('satisfait')).length;
-    if (responses.length > 0) document.getElementById('h-sat').textContent = Math.round(sat/responses.length*100) + '%';
-    else document.getElementById('h-sat').textContent = '—';
-  } else {
-    document.getElementById('h-total').textContent = '—';
-    document.getElementById('h-partir').textContent = '—';
-    document.getElementById('h-sat').textContent = '—';
-  }
-
-  // Community section
-  const cmTot = document.getElementById('cm-tot');
-  const cmPt = document.getElementById('cm-pt');
-  const cmSat = document.getElementById('cm-sat');
-
-  cmTot.textContent = responses.length || '—';
-  if (responses.length > 0) {
-    const parti = responses.filter(r => r.decision.includes('parti_') && !r.decision.includes('reste')).length;
-    cmPt.textContent = Math.round(parti/responses.length*100) + '%';
-    const sat = responses.filter(r => r.decision.includes('satisfait')).length;
-    cmSat.textContent = Math.round(sat/responses.length*100) + '%';
-  } else {
-    cmPt.textContent = '—';
-    cmSat.textContent = '—';
-  }
-}
-
-// ════════════════════════════════════════════
-// PAGE PDF PROFESSIONNELLE
-// ════════════════════════════════════════════
-function showPDF() {
-  if (!lastResults) { showToast('Passe d\'abord le test.'); return; }
-  buildPDFContent();
-  showPage('page-pdf');
-}
-
-function buildPDFContent() {
-  const {pPct, rPct, byDim, detail} = lastResults;
-  const diff = pPct - rPct;
-  const date = new Date().toLocaleDateString('fr-FR', {day:'2-digit', month:'long', year:'numeric'});
-
-  const dimMap = {
-    financier:'💶 Finances', linguistique:'🗣️ Langue',
-    projet_pro:'🎯 Projet pro', autonomie:'⚡ Autonomie',
-    personnel:'👨‍👩‍👧 Situation perso', motivation:'🔍 Motivation',
-    ancrage:'🤝 Ancrage France', maturite:'✈️ Expérience', vision:'🔭 Vision LT'
-  };
-
-  let rec, recColor;
-  if (diff >= 35) { rec = 'Fortement recommandé de partir'; recColor = '#2D3BE8'; }
-  else if (diff >= 15) { rec = 'Recommandé de partir'; recColor = '#2D3BE8'; }
-  else if (diff >= 0) { rec = 'Profil partagé — à approfondir'; recColor = '#7A6F64'; }
-  else if (diff >= -15) { rec = 'Plutôt rester en France'; recColor = '#FF6B35'; }
-  else { rec = 'Fortement déconseillé de partir maintenant'; recColor = '#E84040'; }
-
-  // Synthèse des réponses
-  const answersHTML = questionFlow
-    .filter(q => answers[q.id] !== undefined)
-    .map(q => `
-      <div class="pdf-answer-row">
-        <div class="pdf-a-q">${q.title.substring(0,70)}${q.title.length>70?'…':''}</div>
-        <div class="pdf-a-r">${q.options[answers[q.id]].l}</div>
-      </div>`).join('');
-
-  // Facteurs
-  const factors = Object.entries(byDim).map(([dim, data]) => {
-    const tot = data.p + data.r || 1;
-    const pct = Math.round(data.p / tot * 100);
-    const label = dimMap[dim] || dim;
-    const isPos = pct >= 55;
-    return `<div class="pdf-factor">
-      <span class="pdf-factor-icon">${isPos?'✅':'⚠️'}</span>
-      <span class="pdf-factor-txt">${label}</span>
-      <span class="pdf-factor-badge" style="background:${isPos?'#E6FAF4':'#FFF0EB'};color:${isPos?'#007A58':'#FF6B35'}">${pct}%</span>
+function renderDestQuestion(){
+  const q=DEST_QUESTIONS[destQIdx];
+  if(!q){computeAndShowDest();return;}
+  const saved=destAnswers[q.id];
+  const optsHTML=q.options.map((opt,i)=>`
+    <button class="opt ${saved===i?'selected':''}" onclick="selectDestOpt(${i})">
+      <div class="opt-radio"></div>
+      <div><div class="opt-label">${opt.l}</div><div class="opt-desc">${opt.d}</div></div>
+    </button>`).join('');
+  const isLast=destQIdx===DEST_QUESTIONS.length-1;
+  const hasPrev=destQIdx>0;
+  document.getElementById('dest-quiz').innerHTML=`
+    <div class="q-card active">
+      <div class="q-bloc" style="color:var(--blue)">Guide destinations · ${destQIdx+1} / ${DEST_QUESTIONS.length}</div>
+      <div class="q-title">${q.title}</div>
+      <div class="q-subtitle">${q.subtitle}</div>
+      <div class="options">${optsHTML}</div>
+      <div class="q-nav">
+        <button class="btn-prev" onclick="prevDestQ()" style="${hasPrev?'':'visibility:hidden'}">← Précédent</button>
+        <button class="btn-next" id="btn-dest-next" onclick="nextDestQ()" ${saved!==undefined?'':'disabled'} style="background:var(--blue);box-shadow:0 4px 16px rgba(107,159,232,.2)">
+          ${isLast?'Voir mes destinations →':'Suivant →'}
+        </button>
+      </div>
     </div>`;
-  }).join('');
+}
 
-  // Verdict texte
-  const reasons = buildReasons(byDim, diff);
-  const verdictHTML = reasons.map(r => `<p>${r.icon} ${r.text}</p>`).join('');
+function selectDestOpt(idx){
+  const q=DEST_QUESTIONS[destQIdx];destAnswers[q.id]=idx;
+  document.querySelectorAll('.opt').forEach((el,i)=>el.classList.toggle('selected',i===idx));
+  document.getElementById('btn-dest-next').disabled=false;
+}
+function nextDestQ(){if(destAnswers[DEST_QUESTIONS[destQIdx].id]===undefined)return;if(destQIdx<DEST_QUESTIONS.length-1){destQIdx++;renderDestQuestion();}else computeAndShowDest();}
+function prevDestQ(){if(destQIdx>0){destQIdx--;renderDestQuestion();}}
 
-  const content = `
+function computeAndShowDest(){
+  const da=destAnswers;
+  const zoneAns=DEST_QUESTIONS[0].options[da['dq_zone']??2].val;
+  const langAns=DEST_QUESTIONS[1].options[da['dq_lang']??3].val;
+  const budgetAns=DEST_QUESTIONS[2].options[da['dq_budget']??1].val;
+  const profileAns=DEST_QUESTIONS[3].options[da['dq_profile']??2].val;
+  const adventureAns=DEST_QUESTIONS[4].options[da['dq_adventure']??1].val;
+  const budgetMap={'low':1,'mid':2,'high':3,'vhigh':5};const maxCost=budgetMap[budgetAns]||3;
+  const adventureMap={'low':1,'mid':2,'high':3,'max':5};const maxDiff=adventureMap[adventureAns]||3;
+
+  // Scorer chaque destination
+  const scored=DESTINATIONS.map(d=>{
+    let score=0;
+    // Zone
+    if(zoneAns==='all'||(zoneAns==='europe'&&d.zone==='europe')||(zoneAns==='horsEurope'&&d.zone==='horsEurope'))score+=30;
+    else score-=50;
+    // Budget
+    if(d.cost<=maxCost)score+=20;
+    else if(d.cost===maxCost+1)score+=5;
+    else score-=20;
+    // Niveau aventure
+    if(d.difficulty<=maxDiff)score+=15;
+    else if(d.difficulty===maxDiff+1)score+=5;
+    else score-=10;
+    // Langue
+    if(langAns==='english'&&d.lang.includes('anglais'))score+=20;
+    else if(langAns==='latin'&&(d.lang.includes('espagnol')||d.lang.includes('portugais')||d.lang.includes('italien')||d.lang.includes('roumain')))score+=20;
+    else if(langAns==='french'&&(d.lang.includes('français')||d.id==='be'||d.id==='ca'))score+=25;
+    else if(langAns==='any')score+=10;
+    // Profil pro
+    if(profileAns==='finance'&&d.profile.finance)score+=15;
+    if(profileAns==='intl'&&d.profile.intl)score+=15;
+    if(profileAns==='business'&&d.profile.business)score+=15;
+    if(profileAns==='startup'&&(d.id==='pt'||d.id==='ie'||d.id==='ca'))score+=15;
+    if(profileAns==='emerging'&&(d.zone==='horsEurope'))score+=15;
+    return{...d,score};
+  }).filter(d=>d.score>0).sort((a,b)=>b.score-a.score);
+
+  const top=scored.slice(0,3);
+  const good=scored.slice(3,7);
+  const others=scored.slice(7);
+
+  document.getElementById('dest-quiz').style.display='none';
+  const rw=document.getElementById('dest-results');
+  rw.style.display='block';
+
+  let html=`
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:2rem">
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:.5rem">Résultats personnalisés</div>
+        <h3 style="font-size:1.4rem;font-weight:700;color:var(--ink);letter-spacing:-.02em">${scored.length} destinations correspondent à ton profil</h3>
+      </div>
+      <button class="btn-res" onclick="startDest()" style="flex-shrink:0">← Modifier mes préférences</button>
+    </div>`;
+
+  if(top.length){
+    html+=`<div class="dest-section-title">⭐ Meilleures correspondances</div>
+    <div class="dest-grid">${top.map(d=>destCardHTML(d,'top','match-top','Excellent match')).join('')}</div>`;
+  }
+  if(good.length){
+    html+=`<div class="dest-section-title">👍 Bonnes correspondances</div>
+    <div class="dest-grid">${good.map(d=>destCardHTML(d,'good','match-good','Bon match')).join('')}</div>`;
+  }
+  if(others.length){
+    html+=`<div class="dest-section-title">🔍 Autres destinations disponibles</div>
+    <div class="dest-grid">${others.map(d=>destCardHTML(d,'','match-ok','Compatible')).join('')}</div>`;
+  }
+  html+=`
+    <div style="background:var(--bg-card);border:1px solid var(--sage-bdr);border-radius:var(--r);padding:1.5rem;margin-top:2rem">
+      <div style="font-size:13px;font-weight:600;color:var(--sage);margin-bottom:.5rem">⚠️ Note importante</div>
+      <p style="font-size:13px;color:var(--ink-muted);line-height:1.7">Les établissements partenaires indiqués sont représentatifs des accords Erasmus+ typiques pour un IUT GEA en France. <strong style="color:var(--ink)">Pour connaître les partenaires exacts et à jour de l'IUT de Vienne</strong>, consulte le bureau des relations internationales ou le site officiel de l'IUT.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:1.5rem">
+      <button class="btn-res" onclick="goHome()">← Accueil</button>
+      <button class="btn-res btn-res-p" onclick="startTest()">Évaluer mon profil →</button>
+    </div>`;
+  rw.innerHTML=html;
+}
+
+function destCardHTML(d,cardClass,matchClass,matchLabel){
+  const proHTML=d.pros.map(p=>`<div class="dest-reason"><span class="dest-reason-icon">✓</span>${p}</div>`).join('');
+  const conHTML=d.cons.map(c=>`<div class="dest-reason warn"><span class="dest-reason-icon warn">!</span>${c}</div>`).join('');
+  const pillsHTML=d.tags.map(t=>`<span class="dest-pill">${t}</span>`).join('');
+  const costStars='€'.repeat(Math.min(d.cost,5));
+  const diffStars='★'.repeat(Math.min(d.difficulty,5));
+  return`<div class="dest-card ${cardClass}">
+    <div class="dest-card-top">
+      <span class="dest-flag">${d.flag}</span>
+      <span class="dest-match ${matchClass}">${matchLabel}</span>
+    </div>
+    <div class="dest-country">${d.country}</div>
+    <div class="dest-city">📍 ${d.city}</div>
+    <div class="dest-school">${d.school}</div>
+    <div class="dest-school-full">${d.schoolFull}</div>
+    <div class="dest-pills">${pillsHTML}<span class="dest-pill">${costStars} coût</span><span class="dest-pill">${diffStars} difficulté</span><span class="dest-pill">Lang: ${d.lang.join(' / ')}</span></div>
+    <div class="dest-reasons">${proHTML}${conHTML}</div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+// CLAUDE AI
+// ═══════════════════════════════════════════════════
+async function callAI(pPct,rPct,diff,byDim){
+  const out=document.getElementById('ai-out');
+  const summary=questionFlow.filter(q=>answers[q.id]!==undefined).map(q=>`- ${q.title.substring(0,55)} : ${q.options[answers[q.id]].l}`).join('\n');
+  const prompt=`Tu es un conseiller en mobilité internationale spécialisé BUT GEA de Vienne, France 2026. Rigueur d'un DRH avant une mutation, bienveillance d'un mentor.\n\nRéponses de l'étudiant :\n${summary}\n\nScore mobilité : ${pPct}% | Score ancrage local : ${rPct}%\nÉcart : ${diff>0?'+':''}${diff} points en faveur de ${diff>=0?'partir':'rester'}\n\nDonne un conseil en 3 paragraphes courts et précis :\n1. Diagnostic concret de la situation\n2. Le point de bascule principal dans son profil\n3. Une action concrète pour les 30 prochains jours\n\nSois direct, honnête, sans langue de bois. Réponds uniquement en français.`;
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})});
+    const data=await res.json();const txt=data.content?.map(b=>b.text||'').join('')||'';
+    out.innerHTML=txt?`<p class="ai-body">${txt.replace(/\n\n/g,'</p><p class="ai-body" style="margin-top:.875rem">').replace(/\n/g,'<br>')}</p>`:`<p class="ai-body" style="opacity:.6">Conseil non disponible. Consulte le bureau des relations internationales de l'IUT de Vienne.</p>`;
+  }catch{out.innerHTML=`<p class="ai-body" style="opacity:.6">Conseil non disponible. Consulte le bureau des relations internationales de l'IUT de Vienne.</p>`;}
+}
+
+// ═══════════════════════════════════════════════════
+// DONNÉES RÉELLES UNIQUEMENT
+// ═══════════════════════════════════════════════════
+function getUD(){try{const r=localStorage.getItem('geainter_vienne_v1');return r?JSON.parse(r):{responses:[],scores:[]}}catch{return{responses:[],scores:[]}}}
+function saveUD(d){try{localStorage.setItem('geainter_vienne_v1',JSON.stringify(d))}catch{}}
+function recordScore(p,r){const d=getUD();d.scores.push({pPct:p,rPct:r,ts:Date.now()});saveUD(d);}
+function contribute(){
+  const dec=document.getElementById('c-dec').value;if(!dec){showToast('Merci de sélectionner une décision.');return;}
+  const{pPct,rPct}=lastResults||computeScores();const d=getUD();
+  d.responses.push({decision:dec,pPct,rPct,ts:Date.now()});saveUD(d);
+  document.getElementById('c-ok').style.display='block';showToast('Contribution anonyme enregistrée — merci !');loadComm();
+}
+function loadComm(){
+  const ud=getUD();const responses=ud.responses||[];const scores=ud.scores||[];
+  ['h-total','h-partir','h-sat'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='—';});
+  if(scores.length>0){
+    document.getElementById('h-total').textContent=scores.length;
+    const pp=Math.round(scores.filter(s=>s.pPct>50).length/scores.length*100);
+    document.getElementById('h-partir').textContent=pp+'%';
+  }
+  if(responses.length>0){
+    const sat=responses.filter(r=>r.decision.includes('satisfait')).length;
+    document.getElementById('h-sat').textContent=Math.round(sat/responses.length*100)+'%';
+  }
+  const cmTot=document.getElementById('cm-tot'),cmPt=document.getElementById('cm-pt'),cmSat=document.getElementById('cm-sat');
+  if(cmTot)cmTot.textContent=responses.length||'—';
+  if(responses.length>0&&cmPt&&cmSat){
+    const parti=responses.filter(r=>r.decision.startsWith('parti_')).length;
+    cmPt.textContent=Math.round(parti/responses.length*100)+'%';
+    const sat=responses.filter(r=>r.decision.includes('satisfait')).length;
+    cmSat.textContent=Math.round(sat/responses.length*100)+'%';
+  } else{if(cmPt)cmPt.textContent='—';if(cmSat)cmSat.textContent='—';}
+}
+
+// ═══════════════════════════════════════════════════
+// PDF
+// ═══════════════════════════════════════════════════
+function showPDF(){if(!lastResults){showToast('Passe d\'abord le test.');return;}buildPDFContent();showPage('page-pdf');}
+function buildPDFContent(){
+  const{pPct,rPct,byDim,detail}=lastResults;const diff=pPct-rPct;
+  const date=new Date().toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'});
+  const dimMap={financier:'💶 Finances',linguistique:'🗣️ Langue',projet_pro:'🎯 Projet pro',autonomie:'⚡ Autonomie',personnel:'👨‍👩‍👧 Situation perso',motivation:'🔍 Motivation',ancrage:'🤝 Ancrage France',maturite:'✈️ Expérience',vision:'🔭 Vision LT'};
+  let rec,recColor;
+  if(diff>=35){rec='Fortement recommandé de partir';recColor='#2D6A4F';}
+  else if(diff>=15){rec='Recommandé de partir';recColor='#2D6A4F';}
+  else if(diff>=0){rec='Profil partagé — à approfondir';recColor='#7A6030';}
+  else if(diff>=-15){rec='Plutôt rester en France';recColor='#C45C1A';}
+  else{rec='Fortement déconseillé de partir maintenant';recColor='#B03030';}
+  const answersHTML=questionFlow.filter(q=>answers[q.id]!==undefined).map(q=>`<div class="pdf-answer-row"><div class="pdf-a-q">${q.title.substring(0,70)}${q.title.length>70?'…':''}</div><div class="pdf-a-r">${q.options[answers[q.id]].l}</div></div>`).join('');
+  const factors=Object.entries(byDim).map(([dim,data])=>{const tot=data.p+data.r||1;const pct=Math.round(data.p/tot*100);const lbl=dimMap[dim]||dim;const isPos=pct>=55;return`<div class="pdf-factor"><span class="pdf-factor-icon">${isPos?'✅':'⚠️'}</span><span class="pdf-factor-txt">${lbl}</span><span class="pdf-factor-badge" style="background:${isPos?'#EAF7F0':'#FEF0E6'};color:${isPos?'#2D6A4F':'#C45C1A'}">${pct}%</span></div>`;}).join('');
+  const reasons=buildReasons(byDim,diff);
+  const verdictHTML=reasons.map(r=>`<p>${r.icon} ${r.text}</p>`).join('');
+  document.getElementById('pdf-content').innerHTML=`
     <div class="pdf-logo-row">
-      <div class="pdf-logo-txt">GEA<span>go</span></div>
-      <div class="pdf-meta">
-        <div style="font-weight:700;color:#0D1240;font-size:14px">Évaluation de mobilité internationale</div>
-        <div>BUT GEA 3ème année · ${date}</div>
-        <div>Document anonyme et confidentiel</div>
-      </div>
+      <div class="pdf-logo-txt">GEA <em>Inter</em></div>
+      <div class="pdf-meta"><strong>Évaluation de mobilité internationale</strong>BUT GEA Vienne 3ème année · ${date}<br>Document anonyme et confidentiel</div>
     </div>
-
-    <div class="pdf-title-block">
-      <h1>Résultat de l'évaluation</h1>
-      <p style="font-size:17px;font-weight:700;color:${recColor};margin-top:.5rem">${rec}</p>
-    </div>
-
+    <div class="pdf-title-block"><h1>Résultat de l'évaluation</h1><div class="pdf-rec" style="color:${recColor}">${rec}</div></div>
     <div class="pdf-scores">
-      <div class="pdf-score ${diff>0?'win':''}">
-        <div class="pdf-score-label">Score Mobilité Internationale</div>
-        <div class="pdf-score-num" style="${diff>0?'color:var(--blue)':''}">${pPct}%</div>
-      </div>
-      <div class="pdf-score ${diff<=0?'win':''}">
-        <div class="pdf-score-label">Score Ancrage Local (France)</div>
-        <div class="pdf-score-num" style="${diff<=0?'color:var(--orange)':''}">${rPct}%</div>
-      </div>
+      <div class="pdf-score ${diff>0?'win':''}"><div class="pdf-score-label">Score Mobilité Internationale</div><div class="pdf-score-num" style="${diff>0?'color:#2D6A4F':''}">${pPct}%</div></div>
+      <div class="pdf-score ${diff<=0?'win':''}"><div class="pdf-score-label">Score Ancrage Local (France)</div><div class="pdf-score-num" style="${diff<=0?'color:#C45C1A':''}">${rPct}%</div></div>
     </div>
-
-    <div class="pdf-verdict-box">
-      <h3>Analyse et justification</h3>
-      ${verdictHTML}
-    </div>
-
+    <div class="pdf-verdict-box"><h3>Analyse et justification</h3>${verdictHTML}</div>
     <div class="pdf-section-title">Bilan par dimension</div>
     <div class="pdf-factors-grid">${factors}</div>
-
     <div class="pdf-section-title">Synthèse de tes réponses</div>
     <div class="pdf-answers">${answersHTML}</div>
-
-    <div class="pdf-footer">
-      <span>GEAgo — Outil éducatif BUT GEA Projet International 2025</span>
-      <span>Généré le ${date} · Usage personnel uniquement</span>
-    </div>`;
-
-  document.getElementById('pdf-content').innerHTML = content;
+    <div class="pdf-footer-row"><span>GEA Inter — BUT GEA Vienne · Projet International 2025</span><span>Généré le ${date} · Usage personnel uniquement</span></div>`;
+}
+function downloadPDF(){
+  const content=document.getElementById('pdf-content').innerHTML;
+  const win=window.open('','_blank');
+  win.document.write(`<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>GEA Inter — Résultat évaluation mobilité</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',system-ui,sans-serif;background:white;color:#1A2340;padding:40px;max-width:760px;margin:0 auto;line-height:1.6;font-size:14px}.pdf-logo-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:2px solid #1A2340}.pdf-logo-txt{font-size:24px;font-weight:700;color:#1A2340}.pdf-logo-txt em{font-style:normal;color:#2D6A4F}.pdf-meta{font-size:12px;color:#6B7A9B;text-align:right;line-height:1.6}.pdf-meta strong{color:#1A2340;font-size:13px;display:block;margin-bottom:2px}.pdf-title-block{text-align:center;margin-bottom:2.5rem}.pdf-title-block h1{font-size:28px;font-weight:700;color:#1A2340;margin-bottom:.5rem}.pdf-rec{font-size:15px;font-weight:700;margin-top:.5rem}.pdf-scores{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:2rem}.pdf-score{background:#F5F7FB;border-radius:8px;padding:1.25rem;text-align:center;border:1.5px solid transparent}.pdf-score.win{background:#EAF7F0;border-color:#2D6A4F}.pdf-score-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#6B7A9B;margin-bottom:6px}.pdf-score-num{font-size:2.5rem;font-weight:700;color:#1A2340;line-height:1}.pdf-score.win .pdf-score-num{color:#2D6A4F}.pdf-verdict-box{background:#1A2340;color:white;border-radius:8px;padding:1.5rem;margin-bottom:1.75rem}.pdf-verdict-box h3{font-size:1.1rem;font-weight:700;margin-bottom:10px}.pdf-verdict-box p{font-size:13px;color:rgba(255,255,255,.82);line-height:1.7;margin-bottom:8px}.pdf-verdict-box p:last-child{margin-bottom:0}.pdf-section-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#6B7A9B;margin-bottom:.875rem;margin-top:1.5rem}.pdf-factors-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.25rem}.pdf-factor{background:#F5F7FB;border-radius:6px;padding:.75rem;display:flex;align-items:center;gap:8px}.pdf-factor-icon{font-size:14px}.pdf-factor-txt{font-size:12px;font-weight:500;color:#1A2340;flex:1}.pdf-factor-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px}.pdf-answer-row{display:flex;align-items:flex-start;gap:12px;padding:.625rem 0;border-bottom:1px solid #EEF0F5}.pdf-answer-row:last-child{border-bottom:none}.pdf-a-q{font-size:12px;color:#6B7A9B;flex:1;line-height:1.5}.pdf-a-r{font-size:12px;font-weight:600;color:#1A2340;text-align:right;max-width:180px;line-height:1.4}.pdf-footer-row{margin-top:2rem;padding-top:1.25rem;border-top:1px solid #EEF0F5;display:flex;justify-content:space-between;font-size:11px;color:#6B7A9B}</style></head><body>${content}</body></html>`);
+  win.document.close();win.focus();setTimeout(()=>win.print(),500);
 }
 
-function downloadPDF() {
-  // Préparer la page pour impression propre
-  const content = document.getElementById('pdf-content').innerHTML;
-  const win = window.open('', '_blank');
-  win.document.write(`<!DOCTYPE html><html lang="fr"><head>
-    <meta charset="UTF-8">
-    <title>GEAgo — Résultat évaluation mobilité</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-      :root{--blue:#2D3BE8;--blue-light:#EEF0FD;--orange:#FF6B35;--orange-light:#FFF0EB;--ink:#0D1240;--ink-muted:#5A6080;--bg:#F0F4FF;--green:#00C48C;--green-light:#E6FAF4;--border:rgba(45,59,232,.12);--r:10px}
-      *{box-sizing:border-box;margin:0;padding:0}
-      body{font-family:'Plus Jakarta Sans',sans-serif;background:white;color:var(--ink);padding:40px;max-width:760px;margin:0 auto;line-height:1.6;font-size:14px}
-      h1,h2,h3,h4,.pdf-logo-txt{font-family:'Syne',sans-serif}
-      .pdf-logo-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:2px solid var(--blue)}
-      .pdf-logo-txt{font-size:26px;font-weight:800;color:var(--blue)}
-      .pdf-logo-txt span{color:var(--orange)}
-      .pdf-meta{font-size:12px;color:var(--ink-muted);text-align:right}
-      .pdf-meta div:first-child{font-weight:700;color:var(--ink);font-size:14px}
-      .pdf-title-block{text-align:center;margin-bottom:2.5rem}
-      .pdf-title-block h1{font-size:28px;font-weight:800;color:var(--ink);margin-bottom:.5rem}
-      .pdf-scores{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:2rem}
-      .pdf-score{background:var(--bg);border-radius:var(--r);padding:1.375rem;text-align:center;border:2px solid transparent}
-      .pdf-score.win{background:var(--blue-light);border-color:var(--blue)}
-      .pdf-score-label{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-muted);margin-bottom:6px}
-      .pdf-score-num{font-family:'Syne',sans-serif;font-size:2.75rem;font-weight:800;color:var(--ink);line-height:1}
-      .pdf-score.win .pdf-score-num{color:var(--blue)}
-      .pdf-verdict-box{background:var(--ink);color:white;border-radius:var(--r);padding:1.5rem;margin-bottom:1.5rem}
-      .pdf-verdict-box h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;margin-bottom:10px}
-      .pdf-verdict-box p{font-size:13px;color:rgba(255,255,255,.82);line-height:1.7;margin-bottom:8px}
-      .pdf-section-title{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted);margin-bottom:.875rem;margin-top:1.5rem}
-      .pdf-factors-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.25rem}
-      .pdf-factor{background:var(--bg);border-radius:6px;padding:.75rem;display:flex;align-items:center;gap:8px}
-      .pdf-factor-icon{font-size:14px}
-      .pdf-factor-txt{font-size:12px;font-weight:600;color:var(--ink);flex:1}
-      .pdf-factor-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px}
-      .pdf-answer-row{display:flex;align-items:flex-start;gap:10px;padding:.625rem 0;border-bottom:1px solid var(--border)}
-      .pdf-answer-row:last-child{border-bottom:none}
-      .pdf-a-q{font-size:12px;color:var(--ink-muted);flex:1;line-height:1.4}
-      .pdf-a-r{font-size:12px;font-weight:600;color:var(--ink);text-align:right;max-width:180px;line-height:1.4}
-      .pdf-footer{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:11px;color:var(--ink-muted)}
-    </style>
-  </head><body>${content}</body></html>`);
-  win.document.close();
-  win.focus();
-  setTimeout(() => { win.print(); }, 500);
+// ═══════════════════════════════════════════════════
+// FAQ & UTILS
+// ═══════════════════════════════════════════════════
+function buildFAQ(){
+  const list=document.getElementById('faq-list');if(!list)return;
+  list.innerHTML=FAQ_DATA.map((f,i)=>`<div class="faq-item"><div class="faq-q" onclick="toggleFAQ(${i})" id="fq${i}"><span>${f.q}</span><span class="faq-ico">+</span></div><div class="faq-a" id="fa${i}">${f.a}</div></div>`).join('');
 }
-
-// ════════════════════════════════════════════
-// FAQ
-// ════════════════════════════════════════════
-function buildFAQ() {
-  const list = document.getElementById('faq-list');
-  if (!list) return;
-  list.innerHTML = FAQ_DATA.map((f,i) => `
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFAQ(${i})" id="fq${i}"><span>${f.q}</span><span class="faq-ico">+</span></div>
-      <div class="faq-a" id="fa${i}">${f.a}</div>
-    </div>`).join('');
+function toggleFAQ(i){
+  const q=document.getElementById('fq'+i),a=document.getElementById('fa'+i);const open=a.classList.contains('open');
+  document.querySelectorAll('.faq-q,.faq-a').forEach(el=>el.classList.remove('open'));
+  if(!open){q.classList.add('open');a.classList.add('open');}
 }
-
-function toggleFAQ(i) {
-  const q = document.getElementById('fq'+i), a = document.getElementById('fa'+i);
-  const open = a.classList.contains('open');
-  document.querySelectorAll('.faq-q,.faq-a').forEach(el => el.classList.remove('open'));
-  if (!open) { q.classList.add('open'); a.classList.add('open'); }
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);}
+function toggleNav(){
+  const m=document.getElementById('mnav'),h=document.getElementById('hbg');m.classList.toggle('open');
+  const spans=h.querySelectorAll('span');
+  if(m.classList.contains('open')){spans[0].style.transform='rotate(45deg) translate(5px,5px)';spans[1].style.opacity='0';spans[2].style.transform='rotate(-45deg) translate(5px,-5px)';}
+  else{spans.forEach(s=>{s.style.transform='';s.style.opacity='';});}
 }
-
-// ════════════════════════════════════════════
-// UTILS
-// ════════════════════════════════════════════
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3200);
-}
-
-function toggleNav() {
-  const m = document.getElementById('mnav'), h = document.getElementById('hbg');
-  m.classList.toggle('open');
-  const spans = h.querySelectorAll('span');
-  if (m.classList.contains('open')) {
-    spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
-    spans[1].style.opacity = '0';
-    spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
-  } else {
-    spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-  }
-}
-
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold:.12});
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-
-buildFAQ();
-loadComm();
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+buildFAQ();loadComm();
 </script>
 </body>
 </html>
